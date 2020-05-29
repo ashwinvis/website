@@ -173,8 +173,8 @@ IPYNB_SKIP_CSS = False
 
 # pelican_planet / webring
 PLANET_FEEDS = read_opml("planet.opml", ["Planets"])
-PLANET_TEMPLATE = 'templates/planet.md.j2'
-PLANET_PAGE = 'content/pages/planet.md'
+PLANET_TEMPLATE = 'templates/planet.rst.j2'
+PLANET_PAGE = 'content/pages/planet.rst'
 PLANET_MAX_ARTICLES_PER_FEED = 1
 PLANET_MAX_ARTICLES = max(42, PLANET_MAX_ARTICLES_PER_FEED * len(PLANET_FEEDS))
 PLANET_MAX_SUMMARY_LENGTH = 140

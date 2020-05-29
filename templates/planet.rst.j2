@@ -1,0 +1,64 @@
+Planet Avium
+############
+:author: Various
+:slug: planet
+:status: published
+
+.. block-info:: What is this?
+
+    A `river of news <https://indieweb.org/planet>`__ from a `selection of
+    feeds <https://github.com/ashwinvis/ashwinvis.github.io/blob/develop/planet.opml>`__
+    I follow. Make a `pull-request
+    <https://github.com/ashwinvis/ashwinvis.github.io/edit/develop/planet.opml>`__
+    to add your feed to this page.
+
+.. block-warning:: Disclaimer
+
+    This is not an endorsement.
+
+.. raw:: html
+
+    <style>
+    #planet img{
+        max-width: 100%;
+        height: auto;
+    }
+    </style>
+
+    <div id="planet">
+    {% for article in articles %}
+    <article class="h-cite">
+    <header>
+      <h1>
+        <a href="{{ article.link }}" rel="bookmark" class="u-url"
+           title="{{ article.title}}" target="_blank">
+          <time class="m-date" datetime="{{ article.updated }}">
+            {{ article.updated.strftime("%b") }}
+            <span class="m-date-day">
+              {{ article.updated.strftime("%d") }}
+            </span>
+            {{ article.updated.strftime("%Y") }}
+          </time>
+          <div class="p-name">
+          {{ article.title or "💬" | indent(width=10)}}
+          </div>
+        </a>
+      </h1>
+      <div class="p-summary">
+      <p>
+      {{ article.summary | indent(width=4) }}
+      </p>
+      </div>
+    </header>
+    <footer>
+      <p>Posted by
+      <span class="p-author"><b>{{ article.author or "Anonymous" }}</b></span>
+      on <time datetime="{{ article.updated }}" class="dt-published"></time>
+      {{ article.updated.strftime("%a %d %b %Y")}}
+      in {{ article.feed_name }}.
+    </footer>
+    <div class="m-clearfix-l"></div>
+
+    </article>
+    {% endfor %}
+    </div>
