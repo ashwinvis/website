@@ -1,5 +1,5 @@
-Global Climate Strike - do not despair, let's face it together
-##############################################################
+Global Climate Strike
+#####################
 
 :author: Ashwin Vishnu Mohanan
 :date: 2021-09-24
@@ -10,18 +10,10 @@ Global Climate Strike - do not despair, let's face it together
 
 :category: Blog
 :tags: life, climate, FridaysForFuture, DigitalStrike, covid-19
+:cover: {static}/images/climate_strike.png
 
-.. :jsaaa:
-..     {static}/climateclock-widget-v2.js
-..
-.. :html_header:
-..     <meta http-equiv="Content-Security-Policy" content="
-..     \         script-src
-..     \           https://fluid.quest
-..     \           https://climateclock.world
-..     \           'unsafe-inline' 'unsafe-eval' 'self';
-..     \         ">
-..     <script src="https://climateclock.world/widget-v2.js" async></script>
+Do not despair, let's face it together
+--------------------------------------
 
 When it comes attitudes on facing Climate Change, there are three kinds of people. They may choose to:
 
