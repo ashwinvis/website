@@ -109,9 +109,8 @@ have little time left to act.
 .. raw:: html
 
    <script src="https://api.climateclock.world/assets/widget-v2.js" async></script>
+   <noscript><a href="https://climateclock.world/">Climate Clock</a></noscript>
    <climate-clock/>
-
-
 
 .. _estimated: https://cds.climate.copernicus.eu/cdsapp#!/software/app-c3s-global-temperature-trend-monitor?tab=app
 .. _this infographic: https://climateclock.net/
