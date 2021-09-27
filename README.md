@@ -40,6 +40,18 @@ make develop
 git config submodule.recurse true
 ```
 
+**Optional**: Set up remote repositories for manual deployment
+
+```
+git remote add downstream git@github.com:ashwinvis/website.git
+git remote add deploy git@github.com:ashwinvis/ashwinvis.github.io
+
+make github
+
+```
+
+<!-- TODO: replace github pages with codeberg pages -->
+
 ## Write content
 
 Add the following script to `~/.profile`:
