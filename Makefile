@@ -6,7 +6,6 @@ BASEDIR=$(CURDIR)
 INPUTDIR=$(BASEDIR)/content
 OUTPUTDIR=$(BASEDIR)/output
 CONFFILE=$(BASEDIR)/pelicanconf.py
-# CONFFILE=$(BASEDIR)/pelicanconf_bluedrop.py
 PUBLISHCONF=$(BASEDIR)/publishconf.py
 
 SSH_HOST=pelvoux.mech.kth.se
@@ -14,7 +13,8 @@ SSH_PORT=22
 SSH_USER=avmo
 SSH_TARGET_DIR=~/public_html
 
-GITHUB_PAGES_BRANCH=master
+GITHUB_PAGES_REMOTE=deploy
+GITHUB_PAGES_BRANCH=pages
 
 
 DEBUG ?= 0
@@ -41,7 +41,7 @@ help:
 	@echo '   make ssh_upload                     upload the web site via SSH        '
 	@echo '   make rsync_upload                   upload the web site via rsync+ssh  '
 	@echo '   make github                         upload the web site via gh-pages   '
-	@echo '   make lint			      lint content                       '
+	@echo '   make lint		                        lint content                       '
 	@echo '                                                                          '
 	@echo '                                                                          '
 	@echo '                                                                          '
@@ -93,8 +93,8 @@ ssh_upload: publish
 	rsync -e "ssh -p $(SSH_PORT)" -P -rvzc --cvs-exclude --delete $(OUTPUTDIR)/ $(SSH_USER)@$(SSH_HOST):$(SSH_TARGET_DIR)
 
 github: publish
-	ghp-import -m "Generate Pelican site" -b $(GITHUB_PAGES_BRANCH) $(OUTPUTDIR)
-	git push origin $(GITHUB_PAGES_BRANCH)
+	ghp-import -m "Generate Pelican site: $$(git id)" -r $(GITHUB_PAGES_REMOTE) -b $(GITHUB_PAGES_BRANCH) $(OUTPUTDIR)
+	git push -u $(GITHUB_PAGES_REMOTE) $(GITHUB_PAGES_BRANCH)
 
 lint:
 	find $(INPUTDIR)  -path $(INPUTDIR)/pages -prune -o -name '*.rst' -print | xargs python -m pelican_ashwinvis.util.lint
