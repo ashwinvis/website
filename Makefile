@@ -81,11 +81,13 @@ else
 	$(PELICAN) -lr $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
 endif
 
-publish:
+publish: cname
 	$(PELICAN) -v $(INPUTDIR) -o $(OUTPUTDIR) -s $(PUBLISHCONF) $(PELICANOPTS)
+	bash -c "shopt -s globstar; rm -r $(OUTPUTDIR)/**/.git"
 
 cname:
 	cd $(BASEDIR)
+	mkdir -p $(OUTPUTDIR)
 	$(PY) -c "from publishconf import *; print(SITEURL, end='')" > $(OUTPUTDIR)/CNAME
 
 ssh_upload: publish
