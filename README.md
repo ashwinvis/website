@@ -1,6 +1,8 @@
-# Ashwin Vishnu's website
+# Ashwin's [fluid.quest](https://fluid.quest) website
 
-![Build Status](https://github.com/ashwinvis/ashwinvis.github.io/workflows/Publish%20pelican%20website/badge.svg)
+[![Build Status](https://github.com/ashwinvis/ashwinvis.github.io/workflows/Publish%20pelican%20website/badge.svg)][actions]
+
+[actions]: https://github.com/ashwinvis/ashwinvis.github.io/actions
 
 ## Requirements
 
@@ -9,11 +11,11 @@
 ## Simple installation
 
 ```sh
-git clone --recursive https://github.com/ashwinvis/ashwinvis.github.io.git
+git clone --recursive https://codeberg.org/ashwinvis/website.git
 ## or a simple clone followed by
 # git submodule update --init --recursive
 
-cd ashwinvis.github.io
+cd website
 python -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
