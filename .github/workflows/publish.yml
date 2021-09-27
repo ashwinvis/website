@@ -60,6 +60,6 @@ jobs:
       with:
         deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
         external_repository: ashwinvis/ashwinvis.github.io
-        publish_branch: master
+        publish_branch: pages
         publish_dir: ./output
         cname: fluid.quest
