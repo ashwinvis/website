@@ -85,3 +85,10 @@ def gh_pages(c):
     c.run('ghp-import -b {github_pages_branch} '
           '-m {commit_message} '
           '{deploy_path} -p'.format(**CONFIG))
+
+@task
+def cname(c, output_dir):
+    from pelican_ashwinvis import SITEURL
+
+    with open(f"{output_dir}/CNAME", "w") as fp:
+        fp.write(SITEURL)

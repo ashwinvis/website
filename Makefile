@@ -88,7 +88,7 @@ publish: cname
 cname:
 	cd $(BASEDIR)
 	mkdir -p $(OUTPUTDIR)
-	$(PY) -c "from publishconf import *; print(SITEURL, end='')" > $(OUTPUTDIR)/CNAME
+	invoke cname $(OUTPUTDIR)
 
 ssh_upload: publish
 	scp -P $(SSH_PORT) -r $(OUTPUTDIR)/* $(SSH_USER)@$(SSH_HOST):$(SSH_TARGET_DIR)rsync_upload: publish

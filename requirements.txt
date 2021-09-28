@@ -78,7 +78,7 @@ idna==3.2
     # via
     #   requests
     #   yarl
-invoke==1.2.0
+invoke==1.6.0
     # via -r requirements.in
 ipython==7.27.0
     # via pelican-liquid-tags
