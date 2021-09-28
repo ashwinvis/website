@@ -1,12 +1,7 @@
 [submodule "m.css"]
 	path = m.css
-	url = https://github.com/ashwinvis/m.css.git
-[submodule "plugins/pelican-planet"]
-	path = src/pelican-planet
-	url = https://github.com/ashwinvis/pelican-planet
-[submodule "plugins/webring"]
-	path = src/webring
-	url = https://github.com/ashwinvis/webring
-[submodule "tufte-css"]
-	path = content/static/tufte-css
-	url = https://github.com/ashwinvis/tufte-css.git
+	url = git@codeberg.org:ashwinvis/m.css.git
+[submodule "content/static/tufte-css"]
+	url = git@codeberg.org:ashwinvis/tufte-css.git
+[submodule "src/pelican-planet"]
+	url = git@framagit.org:ashwinvis/pelican-planet.git
