@@ -2,6 +2,8 @@
 	path = m.css
 	url = git@codeberg.org:ashwinvis/m.css.git
 [submodule "content/static/tufte-css"]
+	path = content/static/tufte-css
 	url = git@codeberg.org:ashwinvis/tufte-css.git
 [submodule "src/pelican-planet"]
+	path = src/pelican-planet
 	url = git@framagit.org:ashwinvis/pelican-planet.git
