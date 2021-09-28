@@ -95,6 +95,7 @@ ssh_upload: publish
 	rsync -e "ssh -p $(SSH_PORT)" -P -rvzc --cvs-exclude --delete $(OUTPUTDIR)/ $(SSH_USER)@$(SSH_HOST):$(SSH_TARGET_DIR)
 
 github: publish
+	git fetch $(GITHUB_PAGES_REMOTE) $(GITHUB_PAGES_BRANCH)
 	ghp-import -m "Generate Pelican site: ashwinvis/website@$$(git id)" -r $(GITHUB_PAGES_REMOTE) -b $(GITHUB_PAGES_BRANCH) $(OUTPUTDIR)
 	git push -u $(GITHUB_PAGES_REMOTE) $(GITHUB_PAGES_BRANCH)
 
