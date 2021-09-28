@@ -81,9 +81,7 @@ else
 	$(PELICAN) -lr $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
 endif
 
-publish: $(OUTPUTDIR) cname
-
-$(OUTPUTDIR): $(INPUTDIR) $(CONFFILE) $(PUBLISHCONF) src m.css templates header.html footer.rst planet.opml
+publish: cname
 	$(PELICAN) -v $(INPUTDIR) -o $(OUTPUTDIR) -s $(PUBLISHCONF) $(PELICANOPTS)
 	bash -c "shopt -s globstar; rm -r $(OUTPUTDIR)/**/.git"
 
