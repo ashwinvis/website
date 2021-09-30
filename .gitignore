@@ -109,3 +109,5 @@ content/pages/planet.md
 # JS
 node_modules
 
+# Code
+.vscode
