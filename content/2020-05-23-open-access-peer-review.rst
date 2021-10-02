@@ -29,7 +29,7 @@ predatory at worst.
 
 .. raw:: html
 
-   <iframe width="560" height="315" sandbox="allow-same-origin allow-scripts allow-popups" src="https://peertube.social/videos/embed/75ba36d5-1e81-4db4-95b0-8dd4790eb282" frameborder="0" allowfullscreen></iframe>
+   <iframe width="560" height="315" sandbox="allow-same-origin allow-scripts allow-popups" title="Paywall - The Business of Scholarship" src="https://tube.tchncs.de/videos/embed/75ba36d5-1e81-4db4-95b0-8dd4790eb282" frameborder="0" allowfullscreen></iframe>
 
 A paradigm shift
 -----------------

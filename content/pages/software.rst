@@ -82,9 +82,7 @@ of `scikit-aero <https://github.com/AeroPython/scikit-aero>`__. Demo:
 
 .. raw:: html
 
-   <iframe width="560" height="315" sandbox="allow-same-origin allow-scripts"
-   src="https://peertube.social/videos/embed/2663f4b3-7c0a-4283-ac8b-9f864187d775"
-   frameborder="0" allowfullscreen> </iframe>
+   <iframe width="560" height="315" sandbox="allow-same-origin allow-scripts allow-popups" title="caeroc: Compressible Aerodynamics Calculator for Python" src="https://tube.tchncs.de/videos/embed/082cd876-2ee9-4d10-a392-63e60410db2c" frameborder="0" allowfullscreen></iframe>
 
 ----
 
