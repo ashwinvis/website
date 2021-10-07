@@ -5,17 +5,9 @@
 </head>
 <body>
     <outline title="Blogroll" text="Blogroll">
-        <outline title="Sylvain Deville" text="Sylvain Deville" type="rss" htmlUrl="https://sylvaindeville.net" xmlUrl="https://sylvaindeville.net/feed/"/>
         <outline title="Excuse me please" text="Excuse me please" type="rss" htmlUrl="http://husemeplz.blogspot.com/feeds/posts/default" xmlUrl="http://husemeplz.blogspot.com/feeds/posts/default"/>
-        <outline title="chomsky.info" text="chomsky.info" type="rss" htmlUrl="http://chomskydotinfo.blogspot.com/" xmlUrl="http://chomskydotinfo.blogspot.com/feeds/posts/default?alt=rss"/>
+        <outline title="chomsky.info" text="chomsky.info" type="rss" htmlUrl="https://chomsky.info/feed/" xmlUrl="https://chomsky.info/feed/"/>
         <outline title="Reclaiming Lost Marbles" text="Reclaiming Lost Marbles" type="rss" htmlUrl="http://nidaac.blogspot.com/feeds/posts/default" xmlUrl="http://nidaac.blogspot.com/feeds/posts/default"/>
-        <outline title="bits and pieces of my day" text="bits and pieces of my day" type="rss" htmlUrl="http://thedailylore.blogspot.com/feeds/posts/default" xmlUrl="http://thedailylore.blogspot.com/feeds/posts/default"/>
-        <outline title="No Dry Day in England" text="No Dry Day in England" type="rss" htmlUrl="http://nodrydayinengland.blogspot.com/feeds/posts/default" xmlUrl="http://nodrydayinengland.blogspot.com/feeds/posts/default"/>
-        <outline title="The World. Our Take." text="The World. Our Take." type="rss" htmlUrl="http://laugh-at-the-world.blogspot.com/" xmlUrl="http://laugh-at-the-world.blogspot.com/feeds/posts/default"/>
-        <outline title="Some Sincere Thoughts" text="Some Sincere Thoughts" type="rss" htmlUrl="http://lissachacko.blogspot.com/feeds/posts/default" xmlUrl="http://lissachacko.blogspot.com/feeds/posts/default"/>
-        <outline title="Oh Pandaram!" text="Oh Pandaram!" type="rss" htmlUrl="https://ohpandaram.wordpress.com" xmlUrl="http://ohpandaram.wordpress.com/feed/"/>
-        <outline title="born with 2 legs, living on 2 wheels" text="born with 2 legs, living on 2 wheels" type="rss" htmlUrl="https://ajitno46.wordpress.com" xmlUrl="https://ajitno46.wordpress.com/feed/"/>
-        <outline title="Ring Around The Aggie" text="Ring Around The Aggie" type="rss" htmlUrl="https://ringaroundtheaggies.wordpress.com" xmlUrl="http://ringaroundtheaggies.wordpress.com/feed/"/>
         <outline title="Jibu's Travel Diary" text="Jibu's Travel Diary" type="rss" htmlUrl="https://jibutomjose.wordpress.com" xmlUrl="http://jibutomjose.wordpress.com/feed/"/>
         <outline title="Unsung Films" text="Unsung Films" type="rss" htmlUrl="https://www.unsungfilms.com" xmlUrl="https://www.unsungfilms.com/feed/"/>
         <outline title="jlelse's Blog" text="jlelse's Blog" type="rss" htmlUrl="https://jlelse.blog/" xmlUrl="https://jlelse.blog/index.xml"/>
@@ -25,33 +17,25 @@
         <outline title="Python Software Foundation News" text="Python Software Foundation News" type="rss" htmlUrl="http://pyfound.blogspot.com/" xmlUrl="https://feeds.feedburner.com/PythonSoftwareFoundationNews"/>
         <outline title="Newest Python PEPs" text="Newest Python PEPs" type="rss" htmlUrl="http://www.python.org/dev/peps" xmlUrl="https://www.python.org/dev/peps/peps.rss/"/>
         <outline title="Python Insider" text="Python Insider" type="rss" htmlUrl="https://pythoninsider.blogspot.com/" xmlUrl="https://feeds.feedburner.com/PythonInsider"/>
-        <outline title="Peter Norvig" text="Peter Norvig" type="rss" htmlUrl="http://www.norvig.com" xmlUrl="http://norvig.com/rss-feed.xml"/>
-        <outline title="PyMOTW – Doug Hellmann" text="PyMOTW – Doug Hellmann" type="rss" htmlUrl="https://doughellmann.com/blog" xmlUrl="http://feeds.doughellmann.com/PyMOTW"/>
         <outline title="Ned Batchelder's blog" text="Ned Batchelder's blog" type="rss" htmlUrl="https://nedbatchelder.com/blog" xmlUrl="https://nedbatchelder.com/blog/rss.xml"/>
         <outline title="PHD Comics" text="PHD Comics" type="rss" htmlUrl="https://www.phdcomics.com" xmlUrl="https://www.phdcomics.com/gradfeed.php"/>
         <outline title="xkcd.com" text="xkcd.com" type="rss" htmlUrl="https://xkcd.com/" xmlUrl="https://xkcd.com/atom.xml"/>
-        <outline title="Gilles Castel" text="Gilles Castel" type="rss" htmlUrl="https://castel.dev" xmlUrl="https://castel.dev/rss.xml"/>
         <outline title="David Revoy" text="David Revoy" type="rss" htmlUrl="https://www.davidrevoy.com/" xmlUrl="https://www.davidrevoy.com/feed/rss"/>
         <outline title="Hynek Schlawak" text="Hynek Schlawak" type="rss" htmlUrl="https://hynek.me/" xmlUrl="https://hynek.me/index.xml"/>
-        <outline title="njs blog" text="njs blog" type="rss" htmlUrl="https://vorpus.org/" xmlUrl="https://vorpus.org/blog/feeds/atom.xml"/>
         <outline title="Trey Hunner" text="Trey Hunner" type="rss" htmlUrl="https://treyhunner.com/" xmlUrl="https://treyhunner.com/atom.xml"/>
         <outline title="PyPy Status Blog" text="PyPy Status Blog" type="rss" htmlUrl="https://morepypy.blogspot.com/" xmlUrl="https://feeds.feedburner.com/PyPyStatusBlog"/>
         <outline title="Tall, Snarky Canadian" text="Tall, Snarky Canadian" type="rss" htmlUrl="https://snarky.ca/" xmlUrl="https://snarky.ca/rss/"/>
         <outline title="Gregory Szorc's Digital Home" text="Gregory Szorc's Digital Home" type="rss" htmlUrl="https://gregoryszorc.com/" xmlUrl="https://gregoryszorc.com/blog/feed/atom/"/>
         <outline title="Alex Schroeder: Diary" text="Alex Schroeder: Diary" type="rss" htmlUrl="https://alexschroeder.ch/wiki" xmlUrl="https://alexschroeder.ch/wiki?action=journal;search=-tag:rpg%20-tag:rsp;lang=en;title=English%20Diary%20without%20RPG%20Pages"/>
         <outline title="Armin Ronacher's Thoughts and Writings" text="Armin Ronacher's Thoughts and Writings" type="rss" htmlUrl="https://lucumr.pocoo.org/" xmlUrl="https://lucumr.pocoo.org/feed.atom"/>
-        <outline title="SciCombinator - Last 10 Days" text="SciCombinator - Last 10 Days" type="rss" htmlUrl="http://www.scicombinator.com/" xmlUrl="http://www.scicombinator.com/hot/ten-days.atom"/>
         <outline title="Matplotblog" text="Matplotblog" type="rss" htmlUrl="https://matplotlib.org/matplotblog/" xmlUrl="https://matplotlib.org/matplotblog/index.xml"/>
         <outline title="conda-forge blog" text="conda-forge blog" type="rss" htmlUrl="https://conda-forge.org/blog/" xmlUrl="https://conda-forge.org/blog/atom.xml"/>
         <outline title="Ekaitz's tech blog" text="Ekaitz's tech blog" type="rss" htmlUrl="https://ekaitz.elenq.tech/" xmlUrl="https://ekaitz.elenq.tech/feeds/all.atom.xml"/>
         <outline title="Fortran Newsletter" text="Fortran Newsletter" type="rss" htmlUrl="https://fortran-lang.org" xmlUrl="https://fortran-lang.org/news.xml"/>
-        <outline title="Research Software Hour" text="Research Software Hour" type="rss" htmlUrl="https://researchsoftwarehour.github.io" xmlUrl="https://researchsoftwarehour.github.io/feed.xml"/>
-        <outline title="FYFD" text="FYFD" type="rss" htmlUrl="https://fuckyeahfluiddynamics.tumblr.com" xmlUrl="https://fuckyeahfluiddynamics.tumblr.com/rss"/>
-        <outline title="FYFD Blog" text="FYFD Blog" type="rss" htmlUrl="https://fyfluiddynamics.com/" xmlUrl="https://fyfluiddynamics.com/feed/"/>
         <outline title="the champaka" text="the champaka" type="rss" htmlUrl="https://blogdecjunior.tumblr.com" xmlUrl="https://blogdecjunior.tumblr.com/rss"/>
-        <outline title="Aswin's tech blog" text="Aswin's tech blog" type="rss" htmlUrl="https://officialcjunior.github.io" xmlUrl="https://officialcjunior.github.io/feed.xml"/>
+        <outline title="Aswin's blog" text="Aswin's blog" type="rss" htmlUrl="https://officialcjunior.github.io" xmlUrl="https://officialcjunior.github.io/index.xml"/>
         <outline title="Kitware blog - Paraview" text="Kitware blog - Paraview" type="rss" htmlUrl="https://blog.kitware.com/tag/paraview/feed" xmlUrl="https://blog.kitware.com/tag/paraview/feed/"/>
-        <outline title="Pradyun Gedam" text="Pradyun Gedam" type="rss" htmlUrl="https://pradyunsg.me" xmlUrl="https://pradyunsg.me/feed.xml"/>
+        <outline title="Pradyun Gedam" text="Pradyun Gedam" type="rss" htmlUrl="https://pradyunsg.me" xmlUrl="https://pradyunsg.me/blog/index.xml"/>
         <outline title="Doctor Fortran" text="Doctor Fortran" type="rss" htmlUrl="https://stevelionel.com/" xmlUrl="https://stevelionel.com/drfortran/feed/"/>
         <outline title="Velibor Zeli" text="Velibor Zeli" type="rss" htmlUrl="https://mylette.rs" xmlUrl="https://mylette.rs/rss.xml"/>
         <outline title="Hund[en]" text="Hund[en]" type="rss" htmlUrl="https://hunden.linuxkompis.se" xmlUrl="https://hunden.linuxkompis.se/feed.xml"/>
@@ -61,9 +45,17 @@
         <outline title="Wizard Zines" text="Wizard Zines" type="rss" htmlUrl="https://wizardzines.com" xmlUrl="https://wizardzines.com/index.xml"/>
         <outline title="Pluralistic" text="Pluralistic" type="rss" htmlUrl="https://pluralistic.net/" xmlUrl="https://pluralistic.net/feed/"/>
         <outline title="noyb" text="noyb" type="rss" htmlUrl="https://noyb.eu/en" xmlUrl="https://noyb.eu/en/rss"/>
+        <outline title="Sajith" text="Sajith" type="rss" htmlUrl="https://nonzen.in" xmlUrl="https://nonzen.in/atom.xml"/>
     </outline>
+    <outline title="Science" text="Science">
+        <outline title="Climate Lab Book" text="Climate Lab Book" type="rss" htmlUrl="http://www.climate-lab-book.ac.uk/feed" xmlUrl="http://www.climate-lab-book.ac.uk/feed/"/>
+        <outline title="Sylvain Deville" text="Sylvain Deville" type="rss" htmlUrl="https://sylvaindeville.net" xmlUrl="https://sylvaindeville.net/feed/"/>
+        <outline title="FYFD" text="FYFD" type="rss" htmlUrl="https://fuckyeahfluiddynamics.tumblr.com" xmlUrl="https://fuckyeahfluiddynamics.tumblr.com/rss"/>
+        <outline title="FYFD Blog" text="FYFD Blog" type="rss" htmlUrl="https://fyfluiddynamics.com/" xmlUrl="https://fyfluiddynamics.com/feed/"/>
+    <outline/>
     <outline title="Planets" text="Planets">
         <outline title="Arch Linux" text="Arch Linux" type="rss" htmlUrl="https://www.archlinux.org/" xmlUrl="https://www.archlinux.org/feeds/planet/"/>
+        <outline title="Planet Python" text="Planet Python" type="rss" htmlUrl="https://www.planetpython.org" xmlUrl="https://www.planetpython.org/rss20.xml"/>
         <outline title="Planet GNOME" text="Planet GNOME" type="rss" htmlUrl="http://planet.gnome.org/" xmlUrl="http://planet.gnome.org/atom.xml"/>
         <outline title="Planet KDE" text="Planet KDE" type="rss" htmlUrl="http://planet.kde.org/" xmlUrl="http://planet.kde.org/global/atom.xml"/>
     </outline>
