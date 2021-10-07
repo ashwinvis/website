@@ -52,7 +52,7 @@
         <outline title="Sylvain Deville" text="Sylvain Deville" type="rss" htmlUrl="https://sylvaindeville.net" xmlUrl="https://sylvaindeville.net/feed/"/>
         <outline title="FYFD" text="FYFD" type="rss" htmlUrl="https://fuckyeahfluiddynamics.tumblr.com" xmlUrl="https://fuckyeahfluiddynamics.tumblr.com/rss"/>
         <outline title="FYFD Blog" text="FYFD Blog" type="rss" htmlUrl="https://fyfluiddynamics.com/" xmlUrl="https://fyfluiddynamics.com/feed/"/>
-    <outline/>
+    </outline>
     <outline title="Planets" text="Planets">
         <outline title="Arch Linux" text="Arch Linux" type="rss" htmlUrl="https://www.archlinux.org/" xmlUrl="https://www.archlinux.org/feeds/planet/"/>
         <outline title="Planet Python" text="Planet Python" type="rss" htmlUrl="https://www.planetpython.org" xmlUrl="https://www.planetpython.org/rss20.xml"/>
