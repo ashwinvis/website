@@ -153,7 +153,8 @@ M_LINKS_FOOTER1 = [
     ("Mastodon [personal]", "https://mastodon.acc.sunet.se/@ashwinvis"),
     ("Mastodon [science]", "https://fediscience.org/@ashwinvis"),
     ("Matrix", "https://matrix.to/#/@ashwinvis:matrix.org"),
-    ("Pixelfed", "https://pixelfed.social/ashwinvis"),
+    ("Pixelfed [photos]", "https://pixelfed.social/ashwinvis"),
+    ("Peertube [videos]" "https://tube.tchncs.de/a/ashwinvis/video-channels"),
 ]
 M_LINKS_FOOTER2 = [
     ("Research", ""),
