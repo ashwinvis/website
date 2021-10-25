@@ -77,7 +77,7 @@ DIRECT_TEMPLATES = (
 MARKDOWN = {
     'extension_configs': {
         'markdown.extensions.codehilite': {'css_class': 'm-code'},
-         'markdown.extensions.toc': {'anchorlink': True},
+        'markdown.extensions.toc': {'anchorlink': True},
         'markdown.extensions.extra': {},
         'markdown.extensions.meta': {},
     },
@@ -205,6 +205,10 @@ M_COLLAPSE_FIRST_ARTICLE = True
 #  M_BRIDGY_PUBLISH = "mastodon"
 
 M_WEBMENTIONS = True
+M_FEDICOMMENTS = True
+
+M_FEDIHOST = "fediscience.org"
+M_FEDIUSER = "ashwinvis"
 
 PLUGINS += [
     #  webring,
