@@ -1,6 +1,6 @@
 {% block metadata -%}
 {{ title }}
-####
+{{ "#" * (title | length) }}
 
 :author: {{ author }}
 :date: {{ date }}
@@ -9,5 +9,6 @@
 :summary: {{ summary }}
 :category: {{ category }}
 :tags: {{ tags | join(', ') }}
+:fediId: __FEDI_ID_PLACEHOLDER__
 {%- endblock %}
 

@@ -1,6 +1,7 @@
 #!/home/avmo/.pyenv/versions/www/bin/python
 import json
 import os
+import re
 import shutil
 import subprocess
 import sys
@@ -10,12 +11,14 @@ from pathlib import Path
 import click
 from cookiecutter import generate, prompt
 from jinja2 import Environment, FileSystemLoader
+
 try:
     from webmentiontools.send import WebmentionSend
-except ImportError:
-    print("WARNING: webmentiontools was not installed")
+except ImportError as err:
+    print("WARNING: webmention-tools was not installed =>", err)
 
-from pelican_ashwinvis import SITEURL
+
+from pelican_ashwinvis import SITEURL, FEDIHOST, FEDIUSER, FEDI_ID_PLACEHOLDER
 
 
 def edit(filename):
@@ -57,6 +60,10 @@ def modify(files):
         git_prompt(filename)
 
 
+def post_url(slug):
+    return os.path.join(SITEURL, slug) + ".html"
+
+
 def bridgy(slug, posse):
     """
     curl -i -d source=https://fluid.quest/hack-the-crisis.html \
@@ -64,9 +71,9 @@ def bridgy(slug, posse):
             https://brid.gy/publish/webmention
     """
     data = {
-        "source": str(Path(SITEURL) / slug) + ".html",
+        "source": post_url(slug),
         "target": "https://brid.gy/publish/" + posse,
-        "endpoint": "https://brid.gy/publish/webmention"
+        "endpoint": "https://brid.gy/publish/webmention",
     }
     #  headers = {"User-Agent": "Mozilla/5.0"}
     #  r = requests.post(
@@ -110,7 +117,10 @@ def new(no_input, write_post, open_editor):
 
     os.chdir(here)
 
-    env = Environment(loader=FileSystemLoader("templates"), autoescape=True,)
+    env = Environment(
+        loader=FileSystemLoader("templates"),
+        autoescape=True,
+    )
     templates = {
         ext: env.get_template(f"post.{ext}.j2") for ext in template_filetypes
     }
@@ -138,7 +148,7 @@ def new(no_input, write_post, open_editor):
     filename = (
         here
         / "content"
-        / "{}-{}.{}".format(today.isoformat(), cc["slug"], cc["filetype"])
+        / "{}-{}.{}".formt(today.isoformat(), cc["slug"], cc["filetype"])
     )
 
     if write_post:
@@ -157,10 +167,63 @@ def new(no_input, write_post, open_editor):
 
     slug = cc["slug"]
     status = cc["status"]
+    if github_pages() and prompt.read_user_yes_no("Syndicate to Mastodon", True):
+        if fedi_id := toot(slug):
+            print("Inserting metadata FediID", fedi_id, " into ", filename)
+            with open(filename, "r+") as fp:
+                text = fp.read()
+                if FEDI_ID_PLACEHOLDER not in text:
+                    print("Expected", FEDI_ID_PLACEHOLDER, "but not found")
+                else:
+                    fp.truncate(0)
+                    new_text = text.replace("__FEDI_ID_PLACEHOLDER__", fedi_id)
+                    fp.write(new_text)
+
+                    github_pages()
+
     git_prompt(filename, slug, status)
 
     if prompt.read_user_yes_no("Webmention bridgy to syndicate?", False):
         bridgy(slug, "mastodon")
+
+
+def github_pages():
+    if prompt.read_user_yes_no("Publish post to Github Pages?", False):
+        make_github = subprocess.run(["make", "github"])
+        return make_github.returncode == 0
+    else:
+        return False
+
+
+def toot(slug, visiblity="public"):
+    if not shutil.which("toot"):
+        print("CLI toot not available!")
+        return None
+
+    message = input("Short message for Mastodon: ")
+    text = f"""\
+{message}
+
+{post_url(slug)}
+#FluidQuest #blog
+    """
+    toot_output = subprocess.check_output(
+        [
+            "toot",
+            "post",
+            "-v",
+            visiblity,
+            "-u",
+            f"{FEDIUSER}@{FEDIHOST}",
+            "--no-color",
+            text,
+        ]
+    ).decode("utf8")
+    if match := re.search(r"\d+", toot_output):
+        return match.group(0)
+    else:
+        print("Failed to parse FediID from toot output:", toot_output)
+        return None
 
 
 def git_prompt(filename, slug=None, status=None):
@@ -187,7 +250,10 @@ def git_prompt(filename, slug=None, status=None):
                 cmd.append("--draft")
             subprocess.run(cmd)
         else:
-            print("ERROR: This requires gh command. https://cli.github.com/manual/")
+            print(
+                "ERROR: This requires gh command. https://cli.github.com/manual/"
+            )
+
 
 if __name__ == "__main__":
     os.chdir(here)

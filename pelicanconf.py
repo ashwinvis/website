@@ -16,7 +16,7 @@ import m
 #  from pelican_jupyter import markup
 #  from pelican.plugins import webring
 #  from pelican.plugins import myst_reader
-from pelican_ashwinvis import post_stats
+from pelican_ashwinvis import post_stats, FEDIHOST, FEDIUSER
 from pelican_ashwinvis.util.util import read_opml
 
 
@@ -207,10 +207,10 @@ M_COLLAPSE_FIRST_ARTICLE = True
 #  M_BRIDGY_PUBLISH = "mastodon"
 
 M_WEBMENTIONS = True
-M_FEDICOMMENTS = True
 
-M_FEDIHOST = "fediscience.org"
-M_FEDIUSER = "ashwinvis"
+M_FEDICOMMENTS = True
+M_FEDIHOST = FEDIHOST
+M_FEDIUSER = FEDIUSER
 
 PLUGINS += [
     #  webring,
