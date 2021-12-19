@@ -86,6 +86,8 @@ MARKDOWN = {
 
 M_CSS_FILES = [
     "/static/custom.compiled.css",
+    "/static/webmention.css",
+    "/static/fedicomments.css",
 ]
 M_THEME_COLOR = "#22272e"
 
