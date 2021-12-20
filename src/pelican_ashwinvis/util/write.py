@@ -148,7 +148,7 @@ def new(no_input, write_post, open_editor):
     filename = (
         here
         / "content"
-        / "{}-{}.{}".formt(today.isoformat(), cc["slug"], cc["filetype"])
+        / "{}-{}.{}".format(today.isoformat(), cc["slug"], cc["filetype"])
     )
 
     if write_post:
@@ -168,18 +168,16 @@ def new(no_input, write_post, open_editor):
     slug = cc["slug"]
     status = cc["status"]
     if github_pages() and prompt.read_user_yes_no("Syndicate to Mastodon", True):
-        if fedi_id := toot(slug):
+        if fedi_id := toot(cc["slug"], cc["summary"]):
             print("Inserting metadata FediID", fedi_id, " into ", filename)
-            with open(filename, "r+") as fp:
-                text = fp.read()
-                if FEDI_ID_PLACEHOLDER not in text:
-                    print("Expected", FEDI_ID_PLACEHOLDER, "but not found")
-                else:
-                    fp.truncate(0)
-                    new_text = text.replace("__FEDI_ID_PLACEHOLDER__", fedi_id)
-                    fp.write(new_text)
+            text = filename.read_text()
+            if FEDI_ID_PLACEHOLDER not in text:
+                print("Expected", FEDI_ID_PLACEHOLDER, "but not found")
+            else:
+                new_text = text.replace("__FEDI_ID_PLACEHOLDER__", fedi_id)
+                filename.write_text(new_text)
 
-                    github_pages()
+                github_pages()
 
     git_prompt(filename, slug, status)
 
@@ -195,14 +193,13 @@ def github_pages():
         return False
 
 
-def toot(slug, visiblity="public"):
+def toot(slug, summary, visiblity="public"):
     if not shutil.which("toot"):
         print("CLI toot not available!")
         return None
 
-    message = input("Short message for Mastodon: ")
     text = f"""\
-{message}
+{summary}
 
 {post_url(slug)}
 #FluidQuest #blog
