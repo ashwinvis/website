@@ -1,12 +1,9 @@
 name: Publish pelican website
 
 on:
-  push:
-    branches:
-      - develop
   pull_request:
     branches:
-      - develop
+      - main
   schedule:
     - cron:  '0 0 * * *'
 
