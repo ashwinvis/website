@@ -10,10 +10,17 @@
     # via -r requirements.in
 -e ./src/pelican-planet
     # via -r requirements.in
-aiohttp==3.7.4.post0
+aiodns==3.0.0
+    # via aiohttp
+aiohttp[speedups]==3.7.4.post0
     # via
     #   -r requirements.in
+    #   aiohttp-client-cache
     #   pelican-planet
+aiohttp-client-cache[sqlite]==0.5.2
+    # via pelican-planet
+aiosqlite==0.16.1
+    # via aiohttp-client-cache
 arrow==1.1.1
     # via jinja2-time
 async-timeout==3.0.1
@@ -23,11 +30,14 @@ async-timeout==3.0.1
 attrs==21.2.0
     # via
     #   aiohttp
+    #   aiohttp-client-cache
     #   jsonschema
 backcall==0.2.0
     # via ipython
 beautifulsoup4==4.7.1
-    # via -r requirements.in
+    # via
+    #   -r requirements.in
+    #   webmention-tools
 binaryornot==0.4.4
     # via cookiecutter
 bleach==4.1.0
@@ -37,8 +47,16 @@ bleach==4.1.0
     #   pelican-planet
 blinker==1.4
     # via pelican
+brotlipy==0.7.0
+    # via aiohttp
+cchardet==2.1.7
+    # via aiohttp
 certifi==2021.5.30
     # via requests
+cffi==1.15.0
+    # via
+    #   brotlipy
+    #   pycares
 chardet==4.0.0
     # via
     #   aiohttp
@@ -57,6 +75,8 @@ defusedxml==0.7.1
     # via
     #   -r requirements.in
     #   nbconvert
+docopt==0.6.2
+    # via webmention-tools
 docutils==0.17.1
     # via
     #   pelican
@@ -84,6 +104,8 @@ ipython==7.27.0
     # via pelican-liquid-tags
 ipython-genutils==0.2.0
     # via nbformat
+itsdangerous==2.0.1
+    # via aiohttp-client-cache
 jedi==0.18.0
     # via ipython
 jinja2==3.0.1
@@ -145,7 +167,10 @@ pelican[markdown]==4.6.0
     #   pelican-ashwinvis
     #   pelican-liquid-tags
     #   pelican-planet
+    #   pelican-sitemap
 pelican-liquid-tags==1.0.1
+    # via -r requirements.in
+pelican-sitemap==1.0.2
     # via -r requirements.in
 pexpect==4.8.0
     # via ipython
@@ -157,6 +182,10 @@ prompt-toolkit==3.0.20
     # via ipython
 ptyprocess==0.7.0
     # via pexpect
+pycares==4.1.2
+    # via aiodns
+pycparser==2.21
+    # via cffi
 pygments==2.10.0
     # via
     #   ipython
@@ -175,6 +204,8 @@ python-dateutil==2.8.2
     #   jupyter-client
     #   pelican
     #   pelican-planet
+python-forge==18.6.0
+    # via aiohttp-client-cache
 python-slugify==5.0.2
     # via cookiecutter
 pytz==2021.1
@@ -186,7 +217,9 @@ pyyaml==5.4.1
 pyzmq==22.2.1
     # via jupyter-client
 requests==2.26.0
-    # via cookiecutter
+    # via
+    #   cookiecutter
+    #   webmention-tools
 restructuredtext-lint==1.3.0
     # via -r requirements.in
 sgmllib3k==1.0.0
@@ -198,6 +231,7 @@ six==1.16.0
     #   feedgenerator
     #   jsonschema
     #   python-dateutil
+    #   url-normalize
 soupsieve==2.2.1
     # via beautifulsoup4
 testpath==0.5.0
@@ -218,15 +252,21 @@ traitlets==5.1.0
     #   nbconvert
     #   nbformat
 typing-extensions==3.10.0.2
-    # via aiohttp
+    # via
+    #   aiohttp
+    #   aiosqlite
 unidecode==1.2.0
     # via pelican
+url-normalize==1.4.3
+    # via aiohttp-client-cache
 urllib3==1.26.6
     # via requests
 wcwidth==0.2.5
     # via prompt-toolkit
 webencodings==0.5.1
     # via bleach
+webmention-tools==0.4.1
+    # via pelican-ashwinvis
 yarl==1.6.3
     # via aiohttp
 

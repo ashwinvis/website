@@ -16,6 +16,7 @@ import m
 #  from pelican_jupyter import markup
 #  from pelican.plugins import webring
 #  from pelican.plugins import myst_reader
+from pelican.plugins import sitemap
 from pelican_ashwinvis import post_stats, FEDIHOST, FEDIAPI, FEDIUSER
 from pelican_ashwinvis.util.util import read_opml
 
@@ -216,6 +217,7 @@ M_FEDIUSER = FEDIUSER
 PLUGINS += [
     #  webring,
     post_stats,
+    sitemap,
     #  markup,
     # "representative_image",
     # "tipue_search",
@@ -244,6 +246,20 @@ WEBRING_MAX_ARTICLES = max(42, WEBRING_ARTICLES_PER_FEED * len(WEBRING_FEED_URLS
 WEBRING_SUMMARY_LENGTH = 140
 TEMPLATE_PAGES = {"planet.html": "planet.html"}
 
+# Sitemap
+SITEMAP = {
+    "format": "xml",
+    "priorities": {
+        "articles": 0.6,
+        "indexes": 0.5,
+        "pages": 0.8,
+    },
+    "changefreqs": {
+        "articles": "monthly",
+        "indexes": "daily",
+        "pages": "monthly"
+    }
+}
 
 # Pagination
 DEFAULT_PAGINATION = 10
