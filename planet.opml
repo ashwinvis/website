@@ -46,12 +46,14 @@
         <outline title="Pluralistic" text="Pluralistic" type="rss" htmlUrl="https://pluralistic.net/" xmlUrl="https://pluralistic.net/feed/"/>
         <outline title="noyb" text="noyb" type="rss" htmlUrl="https://noyb.eu/en" xmlUrl="https://noyb.eu/en/rss"/>
         <outline title="Sajith" text="Sajith" type="rss" htmlUrl="https://nonzen.in" xmlUrl="https://nonzen.in/atom.xml"/>
+        <outline title="Nsukami" text="Nsukami" type="rss" htmlUrl="https://nskm.xyz/posts" xmlUrl="https://nskm.xyz/posts/index.xml"/>
     </outline>
     <outline title="Science" text="Science">
         <outline title="Climate Lab Book" text="Climate Lab Book" type="rss" htmlUrl="http://www.climate-lab-book.ac.uk/feed" xmlUrl="http://www.climate-lab-book.ac.uk/feed/"/>
         <outline title="Sylvain Deville" text="Sylvain Deville" type="rss" htmlUrl="https://sylvaindeville.net" xmlUrl="https://sylvaindeville.net/feed/"/>
         <outline title="FYFD" text="FYFD" type="rss" htmlUrl="https://fuckyeahfluiddynamics.tumblr.com" xmlUrl="https://fuckyeahfluiddynamics.tumblr.com/rss"/>
         <outline title="FYFD Blog" text="FYFD Blog" type="rss" htmlUrl="https://fyfluiddynamics.com/" xmlUrl="https://fyfluiddynamics.com/feed/"/>
+        <outline title="Real Climate" text="Real Climate" type="rss" htmlUrl="https://www.realclimate.org" xmlUrl="https://www.realclimate.org/index.php/feed/langswitch_lang/en/"/>
     </outline>
     <outline title="Planets" text="Planets">
         <outline title="Arch Linux" text="Arch Linux" type="rss" htmlUrl="https://www.archlinux.org/" xmlUrl="https://www.archlinux.org/feeds/planet/"/>
