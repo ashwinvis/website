@@ -13,8 +13,7 @@ Curriculum Vitae
 
             Download PDF
 
-.. raw:: html
 
-    <object width="100%" height="720px" data="../pdf/CV_Mohanan_AshwinVishnu.pdf" type="application/pdf">
-        <embed src="../pdf/CV_Mohanan_AshwinVishnu.pdf" type="application/pdf" />
-    </object>
+.. raw:: html
+   :file: ../static/resume.html
+
