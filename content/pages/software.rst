@@ -58,15 +58,14 @@ Some key features include:
 -  `FluidSim <https://fluidsim.readthedocs.io>`__: Arguably one of
    fastest CFD framework specializing in pseudospectral solvers, with
    on-the-fly post processing. Example of a research done using
-   FluidSim:
+   FluidSim (click to play on `Invidious
+   <https://redirect.invidious.io/watch?v=QHKBOQQJ8XE>`__ or Youtube):
 
-   .. raw:: html
+   .. image:: https://img.youtube.com/vi/QHKBOQQJ8XE/sddefault.jpg
+      :target: https://www.youtube.com/watch?v=QHKBOQQJ8XE
+      :alt: Toy model simulation sw1l.exactlin.modified
 
-      <iframe width="560" height="315"
-      src="https://invidious.snopyta.org/embed/QHKBOQQJ8XE" frameborder="0"
-      allow="accelerometer; autoplay; encrypted-media; gyroscope;
-      picture-in-picture" allowfullscreen> </iframe>
-
+.. {% youtube QHKBOQQJ8XE 480 360  %}
 
 -  `FluidImage <https://fluidimage.readthedocs.io>`__: Calibrate,
    pre-process and perform PIV on large sets of images asynchronously
@@ -78,11 +77,12 @@ Some key features include:
 ''''''''''''''''''''''''''''''''''''''''''''''''
 
 A toy desktop GUI calculator for compressible aerodynamics built on top
-of `scikit-aero <https://github.com/AeroPython/scikit-aero>`__. Demo:
+of `scikit-aero <https://github.com/AeroPython/scikit-aero>`__. Demo recorded on PeerTube:
 
-.. raw:: html
 
-   <iframe width="560" height="315" sandbox="allow-same-origin allow-scripts allow-popups" title="caeroc: Compressible Aerodynamics Calculator for Python" src="https://tube.tchncs.de/videos/embed/082cd876-2ee9-4d10-a392-63e60410db2c" frameborder="0" allowfullscreen></iframe>
+.. image:: https://tube.tchncs.de/lazy-static/previews/cc8b333b-1c4a-4dbc-b975-2d8dcab7c9d9.jpg
+   :target: https://tube.tchncs.de/videos/embed/082cd876-2ee9-4d10-a392-63e60410db2c
+   :alt: Caeroc demo
 
 ----
 
