@@ -37,7 +37,6 @@ Welcome
 
         .. container:: m-col-l-6 m-push-l-1 m-col-m-7 m-nopadt
 
-
             .. container:: m-block m-primary m-badge landing-float-right
 
                .. image:: /images/dp_ashwin_2016.jpg
@@ -60,8 +59,8 @@ Welcome
 
                Postdoc at :p-org:`MISU, Stockholm University`,
                research software developer, blogger and a person.
-               Find more what I do in my showcase_ or
-               check out my `blog posts`_.
+               Find more `what I do 👇`_ or
+               check out my `blog posts 👉 </archives.html>`__.
 
                .. raw:: html
 
@@ -74,15 +73,47 @@ Welcome
 
         .. container:: m-col-l-3 m-push-l-2 m-col-m-4 m-push-m-1 m-col-s-6 m-push-s-3 m-col-t-8 m-push-t-2
 
-            .. button-info:: /pages/showcase.html
-                :class: m-fullwidth
-
-                Showcase
-
             .. button-primary:: /archives.html
                 :class: m-fullwidth
 
                 Blog posts
 
-.. _showcase: /pages/showcase.html
-.. _blog posts: /archives.html
+.. _what I do 👇:
+
+.. container:: m-container-inflate grid-item grid-row-3
+
+   .. container:: grid-item
+
+       .. block-success:: Curriculum Vitae
+
+             Find out my past, present and possible futures in the
+             latest iteration of ...
+
+             .. button-primary:: {filename}/pages/cv.rst
+                 :class: m-fullwidth button-down
+
+                 My CV
+
+   .. container:: grid-item
+
+       .. block-warning:: Research
+
+           A more or less up to date description of my research articles
+           and talks
+
+           .. button-primary:: {filename}/pages/research.rst
+               :class: m-fullwidth button-down
+
+               My portfolio
+
+   .. container:: grid-item
+
+       .. block-info:: Software
+
+           A mix of serious and fun coding projects, mostly hosted on GitHub
+
+           .. button-primary:: {filename}/pages/software.rst
+               :class: m-fullwidth button-down
+
+               My codes
+
