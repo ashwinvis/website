@@ -4,11 +4,11 @@
 #
 #    pip-compile
 #
--e file:///home/avmo/www/website/m.css
+-e ./m.css
     # via -r requirements.in
--e file:///home/avmo/www/website
+-e .
     # via -r requirements.in
--e file:///home/avmo/www/website/src/pelican-planet
+-e ./src/pelican-planet
     # via -r requirements.in
 aiodns==3.0.0
     # via aiohttp
