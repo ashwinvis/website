@@ -4,9 +4,6 @@ from __future__ import unicode_literals
 
 # This file is only used if you use `make publish` or
 # explicitly specify it as your config file.
-
-import os
-import sys
 import shutil
 import logging
 from datetime import datetime
@@ -15,7 +12,9 @@ import m
 
 #  from pelican_jupyter import markup
 #  from pelican.plugins import webring
+# from pelican.plugins import liquid_tags
 #  from pelican.plugins import myst_reader
+from pelican.plugins import pelican_redirect
 from pelican.plugins import sitemap
 from pelican_ashwinvis import post_stats, FEDIHOST, FEDIAPI, FEDIUSER
 from pelican_ashwinvis.util.util import read_opml
@@ -133,7 +132,7 @@ M_LINKS_NAVBAR1 = [
 M_LINKS_NAVBAR2 = [
     (
         "✨Showcase",
-        "pages/showcase.html",
+        "index.html/#what-i-do",
         "",
         [
             ("CV", "pages/cv.html", ""),
@@ -217,7 +216,9 @@ M_FEDIUSER = FEDIUSER
 PLUGINS += [
     #  webring,
     post_stats,
+    pelican_redirect,
     sitemap,
+    #  liquid_tags,
     #  markup,
     # "representative_image",
     # "tipue_search",
@@ -260,6 +261,9 @@ SITEMAP = {
         "pages": "monthly"
     }
 }
+
+# liquid_tags
+YOUTUBE_THUMB_ONLY = True
 
 # Pagination
 DEFAULT_PAGINATION = 10

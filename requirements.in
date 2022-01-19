@@ -22,5 +22,6 @@ async-timeout>=3.0.1
 defusedxml
 pelican-liquid-tags>=1.0.1,<2.0.0
 pelican-sitemap>=1.0.2,<2.0.0
+pelican-redirect>=1.0.2,<2.0.0
 # webmention-tools
 ghp-import

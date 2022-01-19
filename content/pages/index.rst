@@ -3,6 +3,7 @@ Welcome
 
 :date: 2019-11-12
 :save_as: index.html
+:original_url: pages/showcase.html
 :summary: My blog / showcase
 :url:
 :cover: {static}/static/cover-light.svg

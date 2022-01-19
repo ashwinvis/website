@@ -4,11 +4,11 @@
 #
 #    pip-compile
 #
--e ./m.css
+-e file:///home/avmo/www/website/m.css
     # via -r requirements.in
--e .
+-e file:///home/avmo/www/website
     # via -r requirements.in
--e ./src/pelican-planet
+-e file:///home/avmo/www/website/src/pelican-planet
     # via -r requirements.in
 aiodns==3.0.0
     # via aiohttp
@@ -189,8 +189,11 @@ pelican[markdown]==4.7.1
     #   pelican-ashwinvis
     #   pelican-liquid-tags
     #   pelican-planet
+    #   pelican-redirect
     #   pelican-sitemap
 pelican-liquid-tags==1.0.1
+    # via -r requirements.in
+pelican-redirect==1.0.2
     # via -r requirements.in
 pelican-sitemap==1.0.2
     # via -r requirements.in
