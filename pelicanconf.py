@@ -132,7 +132,7 @@ M_LINKS_NAVBAR1 = [
 M_LINKS_NAVBAR2 = [
     (
         "✨Showcase",
-        "index.html/#what-i-do",
+        "/#what-i-do",
         "",
         [
             ("CV", "pages/cv.html", ""),
