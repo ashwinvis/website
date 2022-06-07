@@ -58,8 +58,8 @@ Welcome
                     <code>❯❯❯ say.whoami() </code>
                   </h3>
 
-               Postdoc at :p-org:`MISU, Stockholm University`,
-               research software developer, blogger and a person.
+               Research software engineer / scientific programmer / systems developer at :p-org:`SMHI`[#]_,
+               academic, blogger, husband, father and a person.
                Find more `what I do 👇`_ or
                check out my `blog posts 👉 </archives.html>`__.
 
@@ -118,3 +118,5 @@ Welcome
 
                My codes
 
+
+.. [#]: The views expressed in this website are personal and does not necessarily reflect that of my employer.
