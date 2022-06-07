@@ -1,6 +1,7 @@
 Contact
 #######
 :date: 2019-10-18
+:modified: 2022-06-07
 :slug: contact
 :status: published
 :html_header:
@@ -78,8 +79,8 @@ research_ or software_ that I maintain.
 
 .. block-info:: Find directions to my office
 
-    I try to be at the university once a week, despite working from home most
-    of the time. Let me know beforehand if you drop by.
+    I try to be at the work most of the time, and I work from home occasionally.
+    Let me know beforehand if you drop by.
 
     .. container:: m-row
 
