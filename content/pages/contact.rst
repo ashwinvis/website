@@ -19,7 +19,7 @@ Contact
    \    element.setAttribute("href", y);
    \  }
    \  function openWorkMail(element) {
-   \    var y = decrypt_email("znvygb:Nfujva Ivfuah Zbunana <nizb@zvfh.fh.fr>");
+   \    var y = decrypt_email("znvygb:Nfujva Zbunana <nfujva.zbunana@fzuv.fr>");
    \    element.setAttribute("href", y);
    \  }
    \ </script>
