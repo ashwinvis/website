@@ -23,9 +23,19 @@ Contact
    \    element.setAttribute("href", y);
    \  }
    \ </script>
+   \  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+   \    integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+   \    crossorigin=""/>
+   \ <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+   \    integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+   \    crossorigin=""></script>
+   \ <script language="JavaScript" type="text/javascript">
+   \    var map = L.map('map').setView([58.581188, 16.148062], 13);
+   \    var marker = L.marker([58.581188, 16.148062]).addTo(map);
+   \ </script>
 
 I would love to hear from you!
-Drop me a message if you wish to collaborate, or even leave a comment about my
+Drop me a message if you wish to talk to me or even leave a comment about my
 research_ or software_ that I maintain.
 
 .. raw:: html
@@ -35,28 +45,13 @@ research_ or software_ that I maintain.
      <tr>
        <td class="m-text-center">
          <div class="m-button m-info m-fullwidth" align-content="normal">
-                   <div class="m-big"><b>Visiting address</b></div>
+                   <div class="m-big"><b>Visiting / mailing address</b></div>
                    <span class="m-text m-small">
-                       Arrhenius Laboratory, 6th Floor<br/>
-                       Svante Arrhenius Väg 16C<br/>
-                       Frescati Campus
-                       Stockholm
+                       Folkborgsvägen 17, SE-601 76<br/>
+                       Norrköping, Sweden
                    </span>
          </div>
        </td>
-
-       <td>
-         <div class="m-button m-info m-fullwidth" align-content="normal">
-                   <div class="m-big"><b>Mailing address</b></div>
-                   <span class="m-text m-small">
-                       Department of Meteorology<br/>
-                       Stockholm University</br>
-                       106 91 Stockholm
-                       Sweden
-                   </span>
-         </div>
-       </td>
-
      </tr>
 
      <tr>
@@ -92,20 +87,11 @@ research_ or software_ that I maintain.
 
             .. raw:: html
 
-                <a href="https://www.qwant.com/maps/place/osm:way:63082892@Stockholm_University#map=11.00/59.3661410/18.0589277">
-                <picture width="100%">
-                  <source srcset="/images/contact_map.webp" type="image/webp"
-                    width="100%">
-                  <source srcset="/images/contact_map.jpg" type="image/jpeg"
-                    width="100%">
-                  <img src="/images/contact_map.jpg" width="100%">
-                </picture>
-                </a>
-
+                 <style>#map { height: 180px; }</style>
+                 <div id="map"></div>
 
 
 You can also reach me via social media accounts listed in the footer.
 
 .. _research: /pages/research
 .. _software: /pages/software
-
