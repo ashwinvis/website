@@ -8,10 +8,10 @@ OUTPUTDIR=$(BASEDIR)/output
 CONFFILE=$(BASEDIR)/pelicanconf.py
 PUBLISHCONF=$(BASEDIR)/publishconf.py
 
-SSH_HOST=pelvoux.mech.kth.se
+SSH_HOST=my-ssh-server.localhost
 SSH_PORT=22
-SSH_USER=avmo
-SSH_TARGET_DIR=~/public_html
+SSH_USER=www
+SSH_TARGET_DIR=/var/www
 
 GITHUB_PAGES_REMOTE=deploy
 GITHUB_PAGES_BRANCH=pages
@@ -27,6 +27,14 @@ ifeq ($(RELATIVE), 1)
 	PELICANOPTS += --relative-urls
 endif
 
+SERVER ?= "0.0.0.0"
+
+PORT ?= 0
+ifneq ($(PORT), 0)
+	PELICANOPTS += -p $(PORT)
+endif
+
+
 help:
 	@echo 'Makefile for a pelican Web site                                           '
 	@echo '                                                                          '
@@ -38,7 +46,9 @@ help:
 	@echo '   make serve [PORT=8000]              serve site at http://localhost:8000'
 	@echo '   make serve-global [SERVER=0.0.0.0]  serve (as root) to $(SERVER):80    '
 	@echo '   make devserver [PORT=8000]          serve and regenerate together      '
+	@echo '   make devserver-global               regenerate and serve on 0.0.0.0    '
 	@echo '   make ssh_upload                     upload the web site via SSH        '
+	@echo '   make sftp_upload                    upload the web site via SFTP       '
 	@echo '   make rsync_upload                   upload the web site via rsync+ssh  '
 	@echo '   make github                         upload the web site via gh-pages   '
 	@echo '   make lint		                        lint content                       '
@@ -51,38 +61,28 @@ help:
 	@echo '                                                                          '
 
 html:
-	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
+	"$(PELICAN)" "$(INPUTDIR)" -o "$(OUTPUTDIR)" -s "$(CONFFILE)" $(PELICANOPTS)
 
 clean:
-	[ ! -d $(OUTPUTDIR) ] || rm -rf $(OUTPUTDIR) && rm -f $(INPUTDIR)/pages/planet.md
+	[ ! -d "$(OUTPUTDIR)" ] || rm -rf "$(OUTPUTDIR)" && rm -f $(INPUTDIR)/pages/planet.md
 
 regenerate:
-	$(PELICAN) -r $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
+	"$(PELICAN)" -r "$(INPUTDIR)" -o "$(OUTPUTDIR)" -s "$(CONFFILE)" $(PELICANOPTS)
 
 serve:
-ifdef PORT
-	$(PELICAN) -l $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS) -p $(PORT)
-else
-	$(PELICAN) -l $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
-endif
+	"$(PELICAN)" -l "$(INPUTDIR)" -o "$(OUTPUTDIR)" -s "$(CONFFILE)" $(PELICANOPTS)
 
 serve-global:
-ifdef SERVER
-	$(PELICAN) -l $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS) -p $(PORT) -b $(SERVER)
-else
-	$(PELICAN) -l $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS) -p $(PORT) -b 0.0.0.0
-endif
-
+	"$(PELICAN)" -l "$(INPUTDIR)" -o "$(OUTPUTDIR)" -s "$(CONFFILE)" $(PELICANOPTS) -b $(SERVER)
 
 devserver:
-ifdef PORT
-	$(PELICAN) -lr $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS) -p $(PORT)
-else
-	$(PELICAN) -lr $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
-endif
+	"$(PELICAN)" -lr "$(INPUTDIR)" -o "$(OUTPUTDIR)" -s "$(CONFFILE)" $(PELICANOPTS)
+
+devserver-global:
+	$(PELICAN) -lr $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS) -b 0.0.0.0
 
 publish: cname
-	$(PELICAN) -v $(INPUTDIR) -o $(OUTPUTDIR) -s $(PUBLISHCONF) $(PELICANOPTS)
+	"$(PELICAN)" -v "$(INPUTDIR)" -o "$(OUTPUTDIR)" -s "$(PUBLISHCONF)" $(PELICANOPTS)
 	bash -c "shopt -s globstar; rm -r $(OUTPUTDIR)/**/.git"
 
 cname:
@@ -91,13 +91,18 @@ cname:
 	invoke cname $(OUTPUTDIR)
 
 ssh_upload: publish
-	scp -P $(SSH_PORT) -r $(OUTPUTDIR)/* $(SSH_USER)@$(SSH_HOST):$(SSH_TARGET_DIR)rsync_upload: publish
-	rsync -e "ssh -p $(SSH_PORT)" -P -rvzc --cvs-exclude --delete $(OUTPUTDIR)/ $(SSH_USER)@$(SSH_HOST):$(SSH_TARGET_DIR)
+	scp -P $(SSH_PORT) -r "$(OUTPUTDIR)"/* "$(SSH_USER)@$(SSH_HOST):$(SSH_TARGET_DIR)"
 
 github: publish
 	git fetch $(GITHUB_PAGES_REMOTE) $(GITHUB_PAGES_BRANCH)
 	ghp-import -m "Generate Pelican site: ashwinvis/website@$$(git id)" -r $(GITHUB_PAGES_REMOTE) -b $(GITHUB_PAGES_BRANCH) $(OUTPUTDIR)
 	git push -u $(GITHUB_PAGES_REMOTE) $(GITHUB_PAGES_BRANCH)
+
+sftp_upload: publish
+	printf 'put -r $(OUTPUTDIR)/*' | sftp $(SSH_USER)@$(SSH_HOST):$(SSH_TARGET_DIR)
+
+rsync_upload: publish
+	rsync -e "ssh -p $(SSH_PORT)" -P -rvzc --include tags --cvs-exclude --delete "$(OUTPUTDIR)"/ "$(SSH_USER)@$(SSH_HOST):$(SSH_TARGET_DIR)"
 
 lint:
 	find $(INPUTDIR)  -path $(INPUTDIR)/pages -prune -o -name '*.rst' -print | xargs python -m pelican_ashwinvis.util.lint
@@ -113,4 +118,4 @@ requirements.txt: requirements.in
 	pip-compile -U
 	sed -i 's|file:///home/avmo/www/ashwinvis.github.io|.|g' $@
 
-.PHONY: html help clean regenerate serve serve-global devserver publish ssh_upload github
+.PHONY: html help clean regenerate serve serve-global devserver publish ssh_upload github sftp_upload rsync_upload
