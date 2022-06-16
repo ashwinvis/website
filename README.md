@@ -29,7 +29,7 @@ Update `requirements.txt` and launch development server
 
 ```sh
 pip install -U pip-tools
-pip-compile && pip-sync
+invoke -e pip-compile && pip-sync
 
 make develop
 ```

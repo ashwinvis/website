@@ -5,6 +5,7 @@ import shlex
 import shutil
 import sys
 import datetime
+from pathlib import Path
 
 from invoke import task
 from invoke.main import program
@@ -112,7 +113,7 @@ def livereload(c):
     from livereload import Server
 
     def cached_build():
-        cmd = "-s {settings_base} -e CACHE_CONTENT=True LOAD_CONTENT_CACHE=True"
+        cmd = "-s {settings_base} -e CACHE_CONTENT=true LOAD_CONTENT_CACHE=true"
         pelican_run(cmd.format(**CONFIG))
 
     cached_build()
@@ -182,6 +183,22 @@ def cname(c):
 
     with open("{deploy_path}/CNAME".format(**CONFIG), "w") as fp:
         fp.write(SITEURL)
+
+
+@task
+def pip_compile(c):
+    """Generate from *requirements.in => *requirements.txt files"""
+    _run_pip_compile(c, "requirements")
+    _run_pip_compile(c, "dev-requirements")
+
+
+def _run_pip_compile(c, prefix):
+    c.run(f"pip-compile -U {prefix}.in")
+    reqts_txt = Path(f"{prefix}.txt")
+
+    contents = reqts_txt.read_text()
+    contents_rel_path = contents.replace("file://" + os.getcwd(), ".")
+    reqts_txt.write_text(contents_rel_path)
 
 
 def pelican_run(cmd):
