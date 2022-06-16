@@ -30,10 +30,6 @@ Contact
    \ <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
    \    integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
    \    crossorigin=""></script>
-   \ <script language="JavaScript" type="text/javascript">
-   \    var map = L.map('map').setView([58.581188, 16.148062], 13);
-   \    var marker = L.marker([58.581188, 16.148062]).addTo(map);
-   \ </script>
 
 I would love to hear from you!
 Drop me a message if you wish to talk to me or even leave a comment about my
@@ -44,7 +40,6 @@ research_ or software_ that I maintain.
    <table class="m-table m-flat m-big">
    <tbody>
      <tr>
-       <td class="m-text-center">
          <div class="m-button m-info m-fullwidth" align-content="normal">
                    <div class="m-big"><b>Visiting / mailing address</b></div>
                    <span class="m-text m-small">
@@ -52,7 +47,6 @@ research_ or software_ that I maintain.
                        Norrköping, Sweden
                    </span>
          </div>
-       </td>
      </tr>
 
      <tr>
@@ -88,8 +82,31 @@ research_ or software_ that I maintain.
 
             .. raw:: html
 
-                 <style>#map { height: 180px; }</style>
+                 <style>#map { height: 360px; }</style>
                  <div id="map"></div>
+                 <script language="JavaScript" type="text/javascript" defer>
+
+                    var map = L.map('map').setView([58.581188, 16.148062], 13);
+                    var marker = L.marker([58.581188, 16.148062], {alt: "SMHI"})
+                       .addTo(map)
+                       .bindPopup('SMHI 🔗 <a href="https://www.qwant.com/maps/place/osm:node:4743840719@Sveriges_meteorologiska_och_hydrologiska_institut#map=15.26/58.5795811/16.1459828">Qwant Maps ↗ </a>');
+
+
+                    var popup = L.popup();
+
+                    function onMapClick(e) {
+                        popup
+                            .setLatLng(e.latlng)
+                            .setContent("You clicked the map at " + e.latlng.toString())
+                            .openOn(map);
+                    }
+
+                    map.on('click', onMapClick);
+
+                    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+                       { maxZoom: 19, attribution: '© OpenStreetMap' }
+                    ).addTo(map);
+                 </script>
 
 
 You can also reach me via social media accounts listed in the footer.

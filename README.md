@@ -31,7 +31,7 @@ Update `requirements.txt` and launch development server
 pip install -U pip-tools
 invoke -e pip-compile && pip-sync
 
-make develop
+invoke livereload
 ```
 
 **Tip**: To conveniently work with submodules:

@@ -47,10 +47,10 @@ CONFIG = {
 @task
 def clean(c):
     """Remove generated files"""
-    if os.path.isdir(CONFIG["deploy_path"]):
-        print("Remvin")
-        shutil.rmtree(CONFIG["deploy_path"])
-        os.makedirs(CONFIG["deploy_path"])
+    if os.path.isdir(deploy_path := CONFIG["deploy_path"]):
+        print("Removing", deploy_path)
+        shutil.rmtree(deploy_path)
+        os.makedirs(deploy_path)
 
 
 @task
@@ -124,7 +124,7 @@ def livereload(c):
         "{}/templates/**/*.html".format(theme_path),
     ]
 
-    content_file_extensions = [".md", ".rst"]
+    content_file_extensions = [".html", ".md", ".rst"]
     for extension in content_file_extensions:
         content_glob = "{0}/**/*{1}".format(SETTINGS["PATH"], extension)
         watched_globs.append(content_glob)

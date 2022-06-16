@@ -109,7 +109,7 @@ FORMATTED_FIELDS = ["description", "badge"]
 M_LINKS_NAVBAR1 = [
     (
         "✍️ Posts",
-        "archives",
+        "archives.html",
         "[blog]",
         [
             ("Blog", "category/blog.html", ""),
