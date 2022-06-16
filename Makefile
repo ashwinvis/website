@@ -88,7 +88,7 @@ publish: cname
 cname:
 	cd $(BASEDIR)
 	mkdir -p $(OUTPUTDIR)
-	invoke cname $(OUTPUTDIR)
+	invoke cname
 
 ssh_upload: publish
 	scp -P $(SSH_PORT) -r "$(OUTPUTDIR)"/* "$(SSH_USER)@$(SSH_HOST):$(SSH_TARGET_DIR)"

@@ -202,5 +202,8 @@ def _run_pip_compile(c, prefix):
 
 
 def pelican_run(cmd):
+    if os.getenv("DEBUG"):
+        cmd = " --debug"
+
     cmd += " " + program.core.remainder  # allows to pass-through args to pelican
     pelican_main(shlex.split(cmd))

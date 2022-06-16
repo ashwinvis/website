@@ -11,7 +11,7 @@
         <outline title="Jibu's Travel Diary" text="Jibu's Travel Diary" type="rss" htmlUrl="https://jibutomjose.wordpress.com" xmlUrl="http://jibutomjose.wordpress.com/feed/"/>
         <outline title="Unsung Films" text="Unsung Films" type="rss" htmlUrl="https://www.unsungfilms.com" xmlUrl="https://www.unsungfilms.com/feed/"/>
         <outline title="jlelse's Blog" text="jlelse's Blog" type="rss" htmlUrl="https://jlelse.blog/" xmlUrl="https://jlelse.blog/index.xml"/>
-        <outline title="Frolian's blog" text="Frolian's blog" type="rss" htmlUrl="http://flothesof.github.io/" xmlUrl="https://flothesof.github.io/feeds/all.atom.xml"/>
+        <outline title="Frolian's blog" text="Frolian's blog" type="rss" htmlUrl="http://flothesof.github.io/" xmlUrl="https://flothesof.github.io/rss.xml"/>
         <outline title="Pythonic Perambulations" text="Pythonic Perambulations" type="rss" htmlUrl="http://jakevdp.github.io/" xmlUrl="https://jakevdp.github.io/feeds/all.atom.xml"/>
         <outline title="Drew DeVault's Blog" text="Drew DeVault's Blog" type="rss" htmlUrl="https://drewdevault.com" xmlUrl="https://drewdevault.com/feed.xml"/>
         <outline title="Python Software Foundation News" text="Python Software Foundation News" type="rss" htmlUrl="http://pyfound.blogspot.com/" xmlUrl="https://feeds.feedburner.com/PythonSoftwareFoundationNews"/>
@@ -32,13 +32,11 @@
         <outline title="conda-forge blog" text="conda-forge blog" type="rss" htmlUrl="https://conda-forge.org/blog/" xmlUrl="https://conda-forge.org/blog/atom.xml"/>
         <outline title="Ekaitz's tech blog" text="Ekaitz's tech blog" type="rss" htmlUrl="https://ekaitz.elenq.tech/" xmlUrl="https://ekaitz.elenq.tech/feeds/all.atom.xml"/>
         <outline title="Fortran Newsletter" text="Fortran Newsletter" type="rss" htmlUrl="https://fortran-lang.org" xmlUrl="https://fortran-lang.org/news.xml"/>
-        <outline title="the champaka" text="the champaka" type="rss" htmlUrl="https://blogdecjunior.tumblr.com" xmlUrl="https://blogdecjunior.tumblr.com/rss"/>
         <outline title="Aswin's blog" text="Aswin's blog" type="rss" htmlUrl="https://officialcjunior.github.io" xmlUrl="https://officialcjunior.github.io/index.xml"/>
         <outline title="Kitware blog - Paraview" text="Kitware blog - Paraview" type="rss" htmlUrl="https://blog.kitware.com/tag/paraview/feed" xmlUrl="https://blog.kitware.com/tag/paraview/feed/"/>
         <outline title="Pradyun Gedam" text="Pradyun Gedam" type="rss" htmlUrl="https://pradyunsg.me" xmlUrl="https://pradyunsg.me/blog/index.xml"/>
         <outline title="Doctor Fortran" text="Doctor Fortran" type="rss" htmlUrl="https://stevelionel.com/" xmlUrl="https://stevelionel.com/drfortran/feed/"/>
         <outline title="Velibor Zeli" text="Velibor Zeli" type="rss" htmlUrl="https://mylette.rs" xmlUrl="https://mylette.rs/rss.xml"/>
-        <outline title="Hund[en]" text="Hund[en]" type="rss" htmlUrl="https://hunden.linuxkompis.se" xmlUrl="https://hunden.linuxkompis.se/feed.xml"/>
         <outline title="Michael Hirsch, Ph.D." text="Michael Hirsch, Ph.D." type="rss" htmlUrl="https://www.scivision.dev" xmlUrl="https://www.scivision.dev/index.xml"/>
         <outline title="Nikita Prokopov's blog" text="Nikita Prokopov's blog" type="rss" htmlUrl="https://tonsky.me/" xmlUrl="https://tonsky.me/blog/atom.xml"/>
         <outline title="Julia Evans" text="Julia Evans" type="rss" htmlUrl="https://jvns.ca" xmlUrl="https://jvns.ca/atom.xml"/>
@@ -46,7 +44,7 @@
         <outline title="Pluralistic" text="Pluralistic" type="rss" htmlUrl="https://pluralistic.net/" xmlUrl="https://pluralistic.net/feed/"/>
         <outline title="noyb" text="noyb" type="rss" htmlUrl="https://noyb.eu/en" xmlUrl="https://noyb.eu/en/rss"/>
         <outline title="Sajith" text="Sajith" type="rss" htmlUrl="https://nonzen.in" xmlUrl="https://nonzen.in/atom.xml"/>
-        <outline title="Nsukami" text="Nsukami" type="rss" htmlUrl="https://nskm.xyz/posts" xmlUrl="https://nskm.xyz/posts/index.xml"/>
+        <outline title="Nsukami" text="Nsukami" type="rss" htmlUrl="https://nskm.xyz/posts" xmlUrl="https://nskm.xyz/atom.xml"/>
     </outline>
     <outline title="Science" text="Science">
         <outline title="Climate Lab Book" text="Climate Lab Book" type="rss" htmlUrl="http://www.climate-lab-book.ac.uk/feed" xmlUrl="http://www.climate-lab-book.ac.uk/feed/"/>
