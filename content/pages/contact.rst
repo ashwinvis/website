@@ -107,6 +107,14 @@ research_ or software_ that I maintain.
                        { maxZoom: 19, attribution: '© OpenStreetMap' }
                     ).addTo(map);
                  </script>
+                 <noscript>
+                    <p>
+                      SMHI 🔗
+                      <a href="https://www.qwant.com/maps/place/osm:node:4743840719@Sveriges_meteorologiska_och_hydrologiska_institut#map=15.26/58.5795811/16.1459828">
+                        Qwant Maps ↗
+                      </a>
+                    </p>
+                 </noscript>
 
 
 You can also reach me via social media accounts listed in the footer.
