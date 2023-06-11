@@ -9,7 +9,6 @@ from pathlib import Path
 
 from invoke import task
 from invoke.main import program
-from invoke.util import cd
 from pelican import main as pelican_main
 from pelican.server import ComplexHTTPRequestHandler, RootedHTTPServer
 from pelican.settings import DEFAULT_CONFIG, get_settings_from_file
@@ -187,14 +186,17 @@ def cname(c):
 
 @task
 def pip_compile(c):
-    """Generate from *requirements.in => *requirements.txt files"""
-    _run_pip_compile(c, "requirements")
-    _run_pip_compile(c, "dev-requirements")
+    """Generate from requirements/*.in => requirements/*.txt files"""
+    _run_pip_compile(c, "main")
+    _run_pip_compile(c, "dev")
 
 
 def _run_pip_compile(c, prefix):
-    c.run(f"pip-compile -U {prefix}.in")
-    reqts_txt = Path(f"{prefix}.txt")
+    c.run(
+        "pip-compile -U --resolver=backtracking "
+        f"requirements/{prefix}.in -o requirements/{prefix}.txt"
+    )
+    reqts_txt = Path("requirements", f"{prefix}.txt")
 
     contents = reqts_txt.read_text()
     contents_rel_path = contents.replace("file://" + os.getcwd(), ".")
