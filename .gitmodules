@@ -4,6 +4,6 @@
 [submodule "content/static/tufte-css"]
 	path = content/static/tufte-css
 	url = https://codeberg.org/ashwinvis/tufte-css.git
-[submodule "src/pelican-planet"]
-	path = src/pelican-planet
-	url = https://framagit.org/ashwinvis/pelican-planet.git
+[submodule "src/pelican-aio-planet"]
+	path = src/pelican-aio-planet
+    url = https://codeberg.org/ashwinvis/pelican-aio-planet.git

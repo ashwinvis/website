@@ -8,7 +8,7 @@ from __future__ import unicode_literals
 import os
 import sys
 
-import pelican_planet
+from pelican.plugins import aio_planet
 
 sys.path.append(os.curdir)
 from pelicanconf import *
@@ -29,7 +29,7 @@ try:
 except (ValueError, NameError):
     pass
 
-PLUGINS += [pelican_planet]
+PLUGINS += [aio_planet]
 PLANET_FEEDS = read_opml("planet.opml", ("Blogroll", "Planets"))
 PLANET_RESOLVE_REDIRECTS = True
 
