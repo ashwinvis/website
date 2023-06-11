@@ -75,13 +75,13 @@ DIRECT_TEMPLATES = (
 )
 
 MARKDOWN = {
-    'extension_configs': {
-        'markdown.extensions.codehilite': {'css_class': 'm-code'},
-        'markdown.extensions.toc': {'anchorlink': True},
-        'markdown.extensions.extra': {},
-        'markdown.extensions.meta': {},
+    "extension_configs": {
+        "markdown.extensions.codehilite": {"css_class": "m-code"},
+        "markdown.extensions.toc": {"anchorlink": True},
+        "markdown.extensions.extra": {},
+        "markdown.extensions.meta": {},
     },
-    'output_format': 'html5',
+    "output_format": "html5",
 }
 
 M_CSS_FILES = [
@@ -91,10 +91,10 @@ M_CSS_FILES = [
 ]
 M_THEME_COLOR = "#22272e"
 
-with open("header.html") as header:
+with open("templates/header.html") as header:
     M_HTML_HEADER = header.read()
 
-PLUGINS = [m.htmlsanity, m.components, m.code, m.metadata] #, myst_reader]
+PLUGINS = [m.htmlsanity, m.components, m.code, m.metadata]  # , myst_reader]
 
 M_SITE_LOGO = "/images/logo_ashwin.png"
 M_SITE_LOGO_TEXT = "fluid.quest"
@@ -182,10 +182,10 @@ M_LINKS_FOOTER4 = (
     + [(title, url) for title, url, _, _ in M_LINKS_NAVBAR2]
 )
 
-with open("footer.rst") as footer:
+with open("templates/footer.rst") as footer:
     M_FINE_PRINT = footer.read().format(year=datetime.now().year)
 
-with open("archived_badge.rst") as badge:
+with open("templates/archived_badge.rst") as badge:
     M_ARCHIVED_ARTICLE_BADGE = badge.read()
 
 # For landing page
@@ -255,11 +255,7 @@ SITEMAP = {
         "indexes": 0.5,
         "pages": 0.8,
     },
-    "changefreqs": {
-        "articles": "monthly",
-        "indexes": "daily",
-        "pages": "monthly"
-    }
+    "changefreqs": {"articles": "monthly", "indexes": "daily", "pages": "monthly"},
 }
 
 # liquid_tags
