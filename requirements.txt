@@ -6,8 +6,6 @@
 #
 -e ./m.css
     # via -r requirements.in
--e ./src/pelican-aio-planet
-    # via -r requirements.in
 -e .
     # via -r requirements.in
 aiodns==3.0.0
@@ -104,6 +102,8 @@ pelican[markdown]==4.8.0
     #   pelican-ashwinvis
     #   pelican-redirect
     #   pelican-sitemap
+pelican-aio-planet==0.10.0
+    # via -r requirements.in
 pelican-redirect==1.0.2
     # via -r requirements.in
 pelican-sitemap==1.0.2

@@ -4,6 +4,3 @@
 [submodule "content/static/tufte-css"]
 	path = content/static/tufte-css
 	url = https://codeberg.org/ashwinvis/tufte-css.git
-[submodule "src/pelican-aio-planet"]
-	path = src/pelican-aio-planet
-    url = https://codeberg.org/ashwinvis/pelican-aio-planet.git
