@@ -35,4 +35,3 @@ text links to all the tests in https://webmention.rocks/
 <a href="https://webmention.rocks/test/21">Test 21</a>
 <a href="https://webmention.rocks/test/22">Test 22</a>
 <a href="https://webmention.rocks/test/23/page">Test 23</a>
-

@@ -39,4 +39,3 @@ PLANET_RESOLVE_REDIRECTS = True
 # GOOGLE_ANALYTICS = ""
 
 # m.css specific
-

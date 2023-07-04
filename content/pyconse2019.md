@@ -1,7 +1,7 @@
 ---
 Title: At PyCon Sweden 2019
 Authors: Ashwin Vishnu
-Date: 2019-10-31 
+Date: 2019-10-31
 Modified: 2019-12-01
 Tags: python, fluiddyn, transonic, pyconse
 Status: published
@@ -9,7 +9,6 @@ Slug: pyconse2019
 Category: Tech Talk
 Summary: Representing Transonic
 ---
-
 
 I am attending [PyCon Sweden 2019](http://pycon.se) at Stockholm where I am presenting [Transonic](https://transonic.rtfd.io).
 Do check out the slides for my presentation:
@@ -31,19 +30,19 @@ I got to meet a lot of great like-minded people in those two days! It is no
 easy task to list all whom I met and convey my regards. Therefore, I list the
 videos and slides which might be of interest to you as a reader:
 
-* [Erik Sundell](https://github.com/consideRatio) who works for both _Jupyterhub_
+- [Erik Sundell](https://github.com/consideRatio) who works for both _Jupyterhub_
   and his company shared his insights on how one can setup Jupyter with
   multiple user deployments on a [single server](https://tljh.jupyter.org/) or
-  on [the cloud](https://ztjh.jupyter.org/). [[video]](https://invidio.us/watch?v=Epx4P6YCgTo)
-* [Gavin Chan](https://github.com/gavincyi/pycon-presentation/) who compared _Cython and Pybind11_
-   in his talk. [[video]](https://invidio.us/watch?v=ZRKjoUALmwk)
-* [Isaac Bernat](https://github.com/isaacbernat/presentations/) showed us that
-  _algorithmic_ improvements go a long way, indeed! [[video]](https://invidio.us/watch?v=asZ0SDTKqvM)
+  on [the cloud](https://ztjh.jupyter.org/). [\[video\]](https://invidio.us/watch?v=Epx4P6YCgTo)
+- [Gavin Chan](https://github.com/gavincyi/pycon-presentation/) who compared _Cython and Pybind11_
+  in his talk. [\[video\]](https://invidio.us/watch?v=ZRKjoUALmwk)
+- [Isaac Bernat](https://github.com/isaacbernat/presentations/) showed us that
+  _algorithmic_ improvements go a long way, indeed! [\[video\]](https://invidio.us/watch?v=asZ0SDTKqvM)
 
 There were also really educative talks on
 [asyncio](https://invidio.us/watch?v=EX4YsevmZBg), [property based
 testing](https://invidio.us/watch?v=MKf6KfdTems)
-[[slides]](https://slides.com/hultner/pycon-se-2019) and [mutation
+[\[slides\]](https://slides.com/hultner/pycon-se-2019) and [mutation
 testing](https://invidio.us/watch?v=fZwB1gQBwnU), plus a sizable representation
 from the data science community. A couple of fun projects such as the
 [a plotting DIY tool made using Python + Raspberry Pi Zero,
@@ -58,7 +57,6 @@ large compared to last year. It was quite insightful to learn from the
 [chair](https://www.linkedin.com/in/anna-kazakova-lindegren-154b63b/) that organizing the conference is a
 tightrope walk with a good fraction of ticket sales occurring towards the last
 week and booking the venue has numerous constraints! Hats off!
-
 
 ## Epilogue
 
@@ -75,7 +73,7 @@ There is a video on my [Software](/pages/software.html) page.
 > `mypyc` when it is ready.
 
 This is seriously followed up as a [possible
-enhancement](https://github.com/fluiddyn/transonic/issues/9) to `transonic`. 
+enhancement](https://github.com/fluiddyn/transonic/issues/9) to `transonic`.
 
 > Can you accelerate Pandas?
 
@@ -88,9 +86,9 @@ especially when you follow functional programming style.
 This is a hard one. Of course, if you are dealing with images which are
 read as `numpy` arrays, it is possible. I haven't seen any Python extensions
 written (in Cython or other) to accelerate OpenCV code and even if it does
-exist, `transonic` is not designed to interface with libraries. 
+exist, `transonic` is not designed to interface with libraries.
 
-> Can Pythran replace Cython / f2py for interfacing with native code? 
+> Can Pythran replace Cython / f2py for interfacing with native code?
 
 Pythran does sound like Fortran, but it has nothing much in common - except the
 fact that Pythran and Fortran target scientific computing and HPC. Generally

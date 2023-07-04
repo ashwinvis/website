@@ -31,8 +31,7 @@ def edit_css(sheet: cssutils.css.CSSStyleSheet):
         for idx, rule in enumerate(sheet)
         if isinstance(rule, cssutils.css.CSSFontFaceRule)
         and all(
-            not weight in rule.style.fontFamily
-            for weight in ['Semibold"', 'Regular"']
+            not weight in rule.style.fontFamily for weight in ['Semibold"', 'Regular"']
         )
     ]
     assert indices
