@@ -4,15 +4,14 @@ from __future__ import unicode_literals
 
 # This file is only used if you use `make publish` or
 # explicitly specify it as your config file.
-
 import os
 import sys
 
 from pelican.plugins import aio_planet
 
 sys.path.append(os.curdir)
-from pelicanconf import *
-from pelican_ashwinvis import SITEURL
+from pelicanconf import *  # noqa
+from pelican_ashwinvis import SITEURL  # noqa
 
 RELATIVE_URLS = False
 
@@ -30,7 +29,7 @@ except (ValueError, NameError):
     pass
 
 PLUGINS += [aio_planet]
-PLANET_FEEDS = read_opml("planet.opml", ("Blogroll", "Planets"))
+PLANET_FEEDS = read_opml("planet.opml", ("Blogroll"))
 PLANET_RESOLVE_REDIRECTS = True
 
 # Following items are often useful when publishing
@@ -39,4 +38,3 @@ PLANET_RESOLVE_REDIRECTS = True
 # GOOGLE_ANALYTICS = ""
 
 # m.css specific
-

@@ -20,10 +20,7 @@ repos:
   rev: v0.0.263
   hooks:
   - id: ruff
-- repo: https://github.com/snakemake/snakefmt
-  rev: v0.8.4
-  hooks:
-  - id: snakefmt
+    args: [--fix]
 - repo: https://github.com/executablebooks/mdformat
   rev: 0.7.16
   hooks:
