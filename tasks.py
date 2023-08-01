@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 
+import datetime
 import os
 import shlex
 import shutil
 import sys
-import datetime
 from pathlib import Path
 
 from invoke import task

@@ -17,7 +17,7 @@ Thanks to:
 - <https://fossacademic.tech/2021/12/16/CommentsTest.html>
 
 I have found a way to integrate comments from Fediverse into the blog. The
-implementation is integrated into my Pelican theme. See 
+implementation is integrated into my Pelican theme. See
 [this
 commit](https://codeberg.org/ashwinvis/m.css/commit/d5093d090f3e8458e53f5f4b534f757ffb311d57).
 Now, I need to find a smart way to automate this workflow -- possibly using the

@@ -22,8 +22,8 @@ with others.
 GitHub quickly rolled out a new wider interface, which could be done a bit better,
 IMHO.
 
-| Before    | After  |
-|:---------:|:------:|
+|                                                            Before                                                            |                                                            After                                                             |
+| :--------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------: |
 | <img src="https://user-images.githubusercontent.com/9155111/85446389-ac604900-b594-11ea-8a1f-1018031719e0.png" width="100%"> | <img src="https://user-images.githubusercontent.com/9155111/85515309-42c85500-b5fd-11ea-94d1-057e972bdc8c.png" width="100%"> |
 
 [Get it here][gh-retro].
@@ -35,13 +35,13 @@ parameters](https://github.com/FirefoxBar/xStyle/wiki/Style-format#use-advanced-
 The CSS rules are also less hacky, thanks to identifiable CSS classes in
 Mastodon's frontend.
 
-| Before | After |
-|:------:|:------:
+|                                              Before                                               |                                              After                                              |
+| :-----------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------: |
 | ![mr-before](https://raw.githubusercontent.com/ashwinvis/mastodon-relax/master/images/before.png) | ![mr-after](https://raw.githubusercontent.com/ashwinvis/mastodon-relax/master/images/after.png) |
 
 [Get it here][mr-relax].
 
+The stylesheets are CC-BY-SA licensed. Hope it is useful for you.
+
 [gh-retro]: https://gist.github.com/ashwinvis/569e7814ff91f52807554789afa7f107
 [mr-relax]: https://github.com/ashwinvis/mastodon-relax
-
-The stylesheets are CC-BY-SA licensed. Hope it is useful for you.
