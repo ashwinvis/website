@@ -11,7 +11,6 @@ websites.
 # Author: Vlad Niculae <vlad@vene.ro>
 # Unlicense (see UNLICENSE for details)
 
-from contextlib import suppress
 import logging
 
 logger = logging.getLogger(__name__)
@@ -44,10 +43,10 @@ def add_publications(generator):
     except ImportError:
         from io import StringIO
     try:
+        from pybtex.backends import html
+        from pybtex.database import BibliographyData, PybtexError
         from pybtex.database.input.bibtex import Parser
         from pybtex.database.output.bibtex import Writer
-        from pybtex.database import BibliographyData, PybtexError
-        from pybtex.backends import html
         from pybtex.style.formatting import plain
     except ImportError:
         logger.warn("`pelican_bibtex` failed to load dependency `pybtex`")

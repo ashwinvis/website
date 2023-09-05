@@ -6,7 +6,8 @@ Status: published
 Category: Tech Talk
 Tags: licensing, open-source
 Slug: licensing-software
-Summary: Considerations while selecting a permissive license for your open-source project.
+Summary: Considerations while selecting a permissive license for your open-source
+  project.
 ---
 
 A while back we were discussing changing the license of
@@ -35,7 +36,7 @@ along with this warning:
 A friend of mine had used the MIT license a while ago, commenting that he
 understood every word of it! Well, did he?!
 
----
+______________________________________________________________________
 
 My arguments *in favour of* Apache 2.0 were as follows:
 
@@ -43,7 +44,7 @@ My arguments *in favour of* Apache 2.0 were as follows:
    vice-versa. It is
    [compatible with BSD too](https://softwareengineering.stackexchange.com/questions/40561/is-bsd-license-compatible-with-apache)
 
-2. To quote the license itself from section 1, it makes it adequately clear
+1. To quote the license itself from section 1, it makes it adequately clear
    what *derivative works* are:
 
    > For the purposes of this License, Derivative Works shall not include works
@@ -52,7 +53,7 @@ My arguments *in favour of* Apache 2.0 were as follows:
 
    [Source](https://www.oreilly.com/library/view/understanding-open-source/0596005814/ch02.html)
 
-3. The key aspect of Apache 2.0 is it [protects developers from patent
+1. The key aspect of Apache 2.0 is it [protects developers from patent
    lawsuits](https://snyk.io/blog/mit-apache-bsd-fairest-of-them-all/)
 
 Indeed something more easier to read, but legally sound would be nice, like Blue Oak.
@@ -63,4 +64,3 @@ by [ GNU ](https://www.gnu.org/licenses/license-list.html) and
 good license, but I am no expert, and most likely you are not too. Unfamiliar
 licenses slows down contributions and use of software.  It is listed on [ SPDX
 ](https://spdx.org/licenses/BlueOak-1.0.0.html) though!
-

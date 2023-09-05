@@ -5,7 +5,8 @@ Modified: 2021-09-06
 Date: 2021-08-30T21:06:13.588973
 Slug: domain-name
 Status: published
-Summary: I bought a domain name -- an address, a virtual place to call it home. The what, the how, the why and all those details for the curious.
+Summary: I bought a domain name -- an address, a virtual place to call it home. The
+  what, the how, the why and all those details for the curious.
 Category: Blog
 Tags: meta, software
 ---
@@ -18,7 +19,7 @@ domain name. For a long time, I was not convinced to spend a good handful of
 money on a virtual asset. That changed recently.
 
 After jumping ships from Blogger, to WordPress, to Tumblr and finally to
-[GitHub][GitHub] pages using Pelican static-site generator, I thought I was
+[GitHub] pages using Pelican static-site generator, I thought I was
 done. I had full control on the content and the site generation. It was made
 using open-source software, which means there was no way the toolchain will not
 work in the foreseeable future. Therefore, in short the internals were intact.
@@ -41,22 +42,22 @@ fancies. They would come abruptly, and I should be prepared for this.
 
 By buying a domain name, you get an address which stays the same,
 irrespective of where you host it. The host could be GitHub, Gitlab,
-[Codeberg][codeberg] or even a small server powered by a Raspberry Pi!
+[Codeberg] or even a small server powered by a Raspberry Pi!
 The readers will still be able to find you. And as a bonus, you can choose a
 domain name which represents your interests better.
 
-Talking about interests, did you know there are a lot of [TLDs][TLDs] (top
+Talking about interests, did you know there are a lot of [TLDs] (top
 level domain names) right now. Dull `.com`, `.net` TLDs of yore are old-fashioned.
 The prices can vary a lot! And there are a lot of gotchas to be considered in choosing
 the "domain registrar". Where to buy can be confusing to a total beginner.
 
-## Doing the pre-purchase research 
+## Doing the pre-purchase research
 
 The research that I did was a bit of informal hearsay in the interweb. For instance the [following comics by Julia Evans][b0rk] were really useful[^zines] .
 
 ![choosing a domain registrar](https://wizardzines.com/comics/registrar/registrar.png)
 ![whois protection can](https://wizardzines.com/comics/domain-privacy/domain-privacy.png)
-[![TLDs](https://wizardzines.com/comics/tld/tld.png)][TLDs]
+[![TLDs](https://wizardzines.com/comics/tld/tld.png)][tlds]
 ![subdomains](https://wizardzines.com/comics/subdomains/subdomains.png)
 
 And this one on receiving
@@ -65,13 +66,13 @@ about later. Self-hosting emails is not an easy feat.
 
 On the choosing the domain registrar question, I got a excellent tip from
 [Jan Lukas-Else](https://jlelse.blog/dev/free-website) who had good experience
-with [Porkbun][Porkbun]. Therefore, I went there and there were many good deals
+with [Porkbun]. Therefore, I went there and there were many good deals
 going on.
 
 ## How I bought the domain name
 
 No single correct or optimal answer exists to which domain name one should buy
--- given the plethora of [TLDs][TLDs] in the market! The [prices][prices] are
+-- given the plethora of [TLDs] in the market! The [prices] are
 nearly fixed for a given TLD. This caught my eye, and I decided to scrap the
 table for offline brainstorming.
 
@@ -101,23 +102,23 @@ error message, wondering what had happened.
 I will soon a register [the apex domain / subdomain][subdomain] to point to this
 very website via the [new URL][blog]. Hopefully, all visits to the current URL
 [ashwinvis.github.io](https://ashwinvis.github.io) would be redirected by
-[GitHub][GitHub] as long I continue to use their service.
+[GitHub] as long I continue to use their service.
 
 Over a longer period of time, I can turn to a different host with more ethical
-business model such as [Codeberg][codeberg].
+business model such as [Codeberg].
 
 ## Update
 
 The move is now complete to [fluid.quest][blog].
 
-[blog]: https://fluid.quest
-[GitHub]: https://pages.github.com/
-[subdomain]: https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/about-custom-domains-and-github-pages 
-[codeberg]: https://codeberg.page/
-[TLDs]:https://en.wikipedia.org/wiki/List_of_Internet_top-level_domains 
-[california]: https://genius.com/37517]
-[b0rk]: https://wizardzines.com
-[Porkbun]: https://porkbun.com
-[prices]: https://porkbun.com/products/domains
-
 [^zines]: Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International licensed zines [CC-BY-NC-SA 4.0](https://wizardzines.com/licensing/)
+
+[b0rk]: https://wizardzines.com
+[blog]: https://fluid.quest
+[california]: https://genius.com/37517%5D
+[codeberg]: https://codeberg.page/
+[github]: https://pages.github.com/
+[porkbun]: https://porkbun.com
+[prices]: https://porkbun.com/products/domains
+[subdomain]: https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/about-custom-domains-and-github-pages
+[tlds]: https://en.wikipedia.org/wiki/List_of_Internet_top-level_domains

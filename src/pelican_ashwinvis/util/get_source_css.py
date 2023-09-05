@@ -1,9 +1,9 @@
 from pathlib import Path
 from urllib.parse import urlparse
 
-import requests
 import cssutils
-from toolz import compose, curry, map
+import requests
+from toolz import compose, curry
 
 
 def request_css(url):
@@ -31,8 +31,7 @@ def edit_css(sheet: cssutils.css.CSSStyleSheet):
         for idx, rule in enumerate(sheet)
         if isinstance(rule, cssutils.css.CSSFontFaceRule)
         and all(
-            not weight in rule.style.fontFamily
-            for weight in ['Semibold"', 'Regular"']
+            weight not in rule.style.fontFamily for weight in ['Semibold"', 'Regular"']
         )
     ]
     assert indices

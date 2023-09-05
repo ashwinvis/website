@@ -16,4 +16,3 @@ Curriculum Vitae
 
 .. raw:: html
    :file: ../static/resume.html
-
