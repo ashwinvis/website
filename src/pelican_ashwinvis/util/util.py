@@ -4,7 +4,6 @@ from itertools import chain
 
 from defusedxml.ElementTree import parse
 
-
 logger = logging.getLogger(__name__)
 
 

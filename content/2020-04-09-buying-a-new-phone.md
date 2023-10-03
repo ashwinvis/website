@@ -12,13 +12,13 @@ Tags: life, covid-19, phone
 I have been witnessing the evolution of smart phones into fragile and data
 hungry beasts that they are today, crippling essential features such as:
 
-* 3.5 mm headphone jacks
-* removable batteries
-* ability to unlock the bootloader (root)
-* install a new OS (flash)
-* reliance on Google Play Services for even mainstream apps such as BankID in
+- 3.5 mm headphone jacks
+- removable batteries
+- ability to unlock the bootloader (root)
+- install a new OS (flash)
+- reliance on Google Play Services for even mainstream apps such as BankID in
   Sweden
-* lack of spare parts and support in a couple of years
+- lack of spare parts and support in a couple of years
 
 And as a result I have resisted the urge of getting a new phone for the past 2
 months. But with Covid-19, I accept that having a phone around is essential to
@@ -28,7 +28,7 @@ After much contemplation my criteria boiled down to the following:
 
 1. Repairable with long-term support: both software updates and hardware
    warranty.
-2. Community support in an effort to develop towards a working Linux phone.
+1. Community support in an effort to develop towards a working Linux phone.
 
 The candidates were
 [PinePhone](https://ubports.com/blog/ubports-blog-1/post/pinephone-ubports-community-edition-pre-orders-are-open-271)
@@ -70,7 +70,6 @@ developers to get it to working condition, because [ARM
 development](https://fosdem.org/2020/schedule/event/smartphones/) is a lot of
 work. The /e/ foundation - a fork of Lineage OS is [working on
 it](https://mastodon.social/@e_mydata/103912398236907028).
-
 
 **All you need is a little push in the right direction.**
 

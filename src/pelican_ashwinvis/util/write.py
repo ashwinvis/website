@@ -18,7 +18,7 @@ except ImportError as err:
     print("WARNING: webmention-tools was not installed =>", err)
 
 
-from pelican_ashwinvis import SITEURL, FEDIHOST, FEDIUSER, FEDI_ID_PLACEHOLDER
+from pelican_ashwinvis import FEDI_ID_PLACEHOLDER, FEDIHOST, FEDIUSER, SITEURL
 
 
 def edit(filename):
@@ -121,14 +121,12 @@ def new(no_input, write_post, open_editor):
         loader=FileSystemLoader("templates"),
         autoescape=True,
     )
-    templates = {
-        ext: env.get_template(f"post.{ext}.j2") for ext in template_filetypes
-    }
+    templates = {ext: env.get_template(f"post.{ext}.j2") for ext in template_filetypes}
 
     context_file = here / "templates/cookiecutter.json"
 
     with open(context_file) as fp:
-        defaults = json.load(fp)
+        json.load(fp)
 
     context = generate.generate_context(
         context_file=context_file,
@@ -157,9 +155,7 @@ def new(no_input, write_post, open_editor):
                 fp.write(post)
         except FileExistsError as e:
             print(e)
-            if not prompt.read_user_yes_no(
-                "Continue as if nothing happened?", False
-            ):
+            if not prompt.read_user_yes_no("Continue as if nothing happened?", False):
                 sys.exit()
 
     if open_editor:
@@ -247,9 +243,7 @@ def git_prompt(filename, slug=None, status=None):
                 cmd.append("--draft")
             subprocess.run(cmd)
         else:
-            print(
-                "ERROR: This requires gh command. https://cli.github.com/manual/"
-            )
+            print("ERROR: This requires gh command. https://cli.github.com/manual/")
 
 
 if __name__ == "__main__":

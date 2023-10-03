@@ -2,10 +2,11 @@
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
 
+import logging
+
 # This file is only used if you use `make publish` or
 # explicitly specify it as your config file.
 import shutil
-import logging
 from datetime import datetime
 
 import m
@@ -14,11 +15,9 @@ import m
 #  from pelican.plugins import webring
 # from pelican.plugins import liquid_tags
 #  from pelican.plugins import myst_reader
-from pelican.plugins import pelican_redirect
-from pelican.plugins import sitemap
-from pelican_ashwinvis import post_stats, FEDIHOST, FEDIAPI, FEDIUSER
+from pelican.plugins import pelican_redirect, sitemap
+from pelican_ashwinvis import FEDIAPI, FEDIHOST, FEDIUSER, post_stats
 from pelican_ashwinvis.util.util import read_opml
-
 
 AUTHOR = "Ashwin Vishnu Mohanan"
 SITENAME = "Ashwin Vishnu's Website"

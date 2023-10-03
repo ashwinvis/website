@@ -14,24 +14,12 @@ So we have heard this time and time again.
 1. Surveillance capitalism.
 1. The most profitable companies on the entire planet rely on your data[^data].
 
-[^data]: Also known as [GAFAM, the big four /
-  five](https://en.m.wikipedia.org/wiki/Big_Four_tech_companies). [Framasoft
-  gave an excellent talk about it FOSDEM
-  2017](https://framatube.org/videos/watch/31225e78-5f41-41dc-bfca-5e63b34e7be4)
-  if you don't mind the French accent.
-
 and so on. I believe the agenda for all these companies is to use data to power
 their AI research. And our privacy is just a casualty in this process.  Despite
 all this news and "shocking" revelations that we hear almost every day in the
 news, many tend to stick around and use them, including me[^contra].  There are
 solutions however. And it gets better - what I described below require almost
 zero investment (except for your attention and time, of course).
-
-[^contra]: Including me. Even this very blog post is right now on GitHub pages,
-  and this would seem like a contradiction. In my defence, I started blogging
-  here before the acquisition.  As much as I don't like MS products, GitHub
-  doesn't look like the worst place in the world and blogs are not private
-  places.
 
 ### Solutions that do not require deep technical knowledge
 
@@ -97,6 +85,7 @@ tail -f delete.log
 ```
 
 And the cURL command looks like:
+
 ```sh
 curl -s "https://api.twitter.com/1.1/statuses/destroy/$1.json" ...
 ```
@@ -111,11 +100,13 @@ correct:
 
 In step 3, the following command was used to extract the tweets with no
 interaction
+
 ```sh
 cat tweet.json | jq '.[] | select(.favorite_count == "0") | select(.retweet_count == "0") | select(has("in_reply_to_user_id_str") | not)  | .id' -r > tweetstodelete.txt`
 ```
 
 To get a list of all the tweets:
+
 ```sh
 cat tweet.json | jq '.[] | .id' -r > tweetstodelete.txt
 ```
@@ -167,23 +158,40 @@ tail -f dislike.log
 
 <script src="https://gist.github.com/ashwinvis/b7c749a652471ddfd12546abe2d58b75.js"></script>
 
+[^data]: Also known as [GAFAM, the big four /
+    five](https://en.m.wikipedia.org/wiki/Big_Four_tech_companies). [Framasoft
+    gave an excellent talk about it FOSDEM
+    2017](https://framatube.org/videos/watch/31225e78-5f41-41dc-bfca-5e63b34e7be4)
+    if you don't mind the French accent.
+
+[^contra]: Including me. Even this very blog post is right now on GitHub pages,
+    and this would seem like a contradiction. In my defence, I started blogging
+    here before the acquisition.  As much as I don't like MS products, GitHub
+    doesn't look like the worst place in the world and blogs are not private
+    places.
+
 [^mast]: Such as [Mastodon](https://joinmastodon.org)
+
 [^docs]: Good alternatives are [Cryptpad](https://cryptpad.fr/) and
-  [Etherpad](https://github.com/ether/etherpad-lite/wiki/Sites-that-run-Etherpad-Lite).
+    [Etherpad](https://github.com/ether/etherpad-lite/wiki/Sites-that-run-Etherpad-Lite).
+
 [^email]: [See alternatives](https://www.privacytools.io/providers/email/) of
-  which I use ProtonMail. The only downsides that I think are: for extra data
-  allowance and POP3/IMAP access you need a paid account
+    which I use ProtonMail. The only downsides that I think are: for extra data
+    allowance and POP3/IMAP access you need a paid account
+
 [^chat]: [Google docs spreadsheet which compares digital communication
-  protocols](https://docs.google.com/spreadsheets/d/1-UlA4-tslROBDS9IqHalWVztqZo7uxlCeKPQ-8uoFOU/htmlview)
+    protocols](https://docs.google.com/spreadsheets/d/1-UlA4-tslROBDS9IqHalWVztqZo7uxlCeKPQ-8uoFOU/htmlview)
+
 [^host]: [Why you no host](https://yunohost.org/)
+
 [^dns]: Using [Dynamic DNS](https://wiki.archlinux.org/index.php/Dynamic_DNS)
-  technology. I use a subdomain name provided at
-  [afraid.org](https://freedns.afraid.org).
-[^evil]: Which was removed in
-  [2018](https://en.wikipedia.org/wiki/Don%27t_be_evil) as they no longer
-  follow it.
+    technology. I use a subdomain name provided at
+    [afraid.org](https://freedns.afraid.org).
+
 [^tweets]: I followed [@jlelse's tutorial](https://jlelse.blog/posts/mass-delete-tweets/) to delete tweets.
+
+[^evil]: Which was removed in
+    [2018](https://en.wikipedia.org/wiki/Don%27t_be_evil) as they no longer
+    follow it.
+
 [^archive]: Using [mastodon-archive](https://github.com/kensanata/mastodon-backup)
-[^expire]: This is [an interesting
-  essay](https://alexschroeder.ch/wiki/2017-04-27_Record_Keeping) on why you
-  should expire your posts.
