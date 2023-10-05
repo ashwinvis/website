@@ -26,9 +26,9 @@ its sustained life, without risking extinction.
 
 To that end, I see that the following community projects are interesting:
 
-* [Swathanthra Malayalam Computing](https://smc.org.in) - Fonts, dictionaries,
-  TTS and translations for GNU/Linux desktop OS. 
-* [Varnam project](https://www.varnamproject.com/), 
+- [Swathanthra Malayalam Computing](https://smc.org.in) - Fonts, dictionaries,
+  TTS and translations for GNU/Linux desktop OS.
+- [Varnam project](https://www.varnamproject.com/),
   [online](https://www.varnamproject.com/editor) and
   [desktop](https://subinsb.com/varnam-easily-type-malayalam-indian-languages/)
   editors:

@@ -4,16 +4,15 @@ Author: Ashwin Vishnu Mohanan
 Date: 2021-05-16T12:41:13.443530
 Slug: ternary-operators
 Status: published
-Summary: Different ways to compose ternary operator to condense if-else statements into expressions in several programming languages
+Summary: Different ways to compose ternary operator to condense if-else statements
+  into expressions in several programming languages
 Category: Tech Talk
 Tags: software, python, bash, c, cpp, java, ecmascript
 ---
 
-
 Python has made a concious choice of promoting readability through its syntax.
 A good example of this is the **conditional expression** or **ternary if-else
 "operator"** in Python. What it means is instead of:
-
 
 ```py
 def even_or_odd(x):
@@ -198,7 +197,7 @@ variable `contents` is for illustrative purposes and can be avoided.
 - [`dict.get` method][dict]
 - [`os.getenv` function][getenv]
 
-[bool-py]: https://docs.python.org/3/library/stdtypes.html?#boolean-operations-and-or-not
 [308]: https://www.python.org/dev/peps/pep-0308/
+[bool-py]: https://docs.python.org/3/library/stdtypes.html?#boolean-operations-and-or-not
 [dict]: https://docs.python.org/3/library/stdtypes.html#dict.get
 [getenv]: https://docs.python.org/3.8/library/os.html?#os.getenv
