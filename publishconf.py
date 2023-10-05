@@ -29,7 +29,9 @@ except (ValueError, NameError):
     pass
 
 PLUGINS += [aio_planet]
-PLANET_FEEDS = read_opml("planet.opml", ("Blogroll"))
+PLANET_FEEDS = read_opml("planet.opml", ["Blogroll"])
+if not PLANET_FEEDS:
+    raise LookupError("No planet feeds defined")
 PLANET_RESOLVE_REDIRECTS = True
 
 # Following items are often useful when publishing
