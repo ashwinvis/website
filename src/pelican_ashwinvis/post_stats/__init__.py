@@ -1,1 +1,1 @@
-from .post_stats import *
+from .post_stats import *  # noqa

@@ -3,11 +3,14 @@
 Post Statistics
 ========================
 
-This plugin calculates various statistics about a post and stores them in an article.stats dictionary:
+This plugin calculates various statistics about a post and stores them in an
+article.stats dictionary:
 
 wc: how many words
-read_mins: how many minutes to read this article, based on 250 wpm (http://en.wikipedia.org/wiki/Words_per_minute#Reading_and_comprehension)
-word_counts: frquency count of all the words in the article; can be used for tag/word clouds/
+read_mins: how many minutes to read this article, based on 250 wpm
+    (http://en.wikipedia.org/wiki/Words_per_minute#Reading_and_comprehension)
+word_counts: frquency count of all the words in the article; can be used for
+    tag/word clouds/
 fi: Flesch-kincaid Index/ Reading Ease
 fk: Flesch-kincaid Grade Level
 
@@ -19,7 +22,7 @@ from collections import Counter
 from bs4 import BeautifulSoup
 from pelican import signals
 
-from .readability import *
+from .readability import *  # noqa
 
 
 def calculate_stats(instance):

@@ -13,9 +13,10 @@ websites.
 
 import logging
 
+from pelican import signals
+
 logger = logging.getLogger(__name__)
 
-from pelican import signals
 
 __version__ = "0.2.1"
 
