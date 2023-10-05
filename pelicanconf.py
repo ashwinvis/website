@@ -56,6 +56,7 @@ EXTRA_PATH_METADATA = {
     for resource in (
         "robots.txt",
         "manifest.webmanifest",
+        "bibbase.js",
         "sw.js",
         "app.js",
     )

@@ -3,6 +3,8 @@ Research
 :date: 2019-02-18 15:10
 :slug: research
 :status: published
+:js:
+    /bibbase.js
 
 Highlights
 ==========
@@ -45,9 +47,8 @@ Publications [1]_
 
 .. raw:: html
 
-   <script
-   src="https://bibbase.org/show?bib=https%3A%2F%2Fapi.zotero.org%2Fusers%2F3909932%2Fcollections%2F4TSHE4HW%2Fitems%3Fkey%3DWiDPhsXd8GaIS4rnJu4WaDqJ%26format%3Dbibtex%26limit%3D100&jsonp=1">
-   </script>
+   <div id="bibbaseTarget"></div>
+
 
 .. [1] If the above list does not work
       refer to my `Zotero profile`_.
