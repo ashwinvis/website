@@ -112,3 +112,4 @@ node_modules
 # Code
 .vscode
 .pdm-python
+src/pelican_ashwinvis/_version.py

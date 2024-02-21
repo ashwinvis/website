@@ -1,11 +1,12 @@
 [project]
 name = "pelican-ashwinvis"
 description = "A collection of plugins used for Ashwin's website"
-readme = "README.md, HISTORY.md"
+readme = "README.md"
+dynamic = ["version"]
 authors = [
     {name = "Ashwin Vishnu Mohanan"},
 ]
-requires-python = ">= 3.8"
+requires-python = ">= 3.8.1"
 license = {text = "AGPL-3.0-or-later"}
 dependencies = [
     "pelican<5.0,>=4.5",
@@ -14,7 +15,6 @@ dependencies = [
     "invoke>=1.6.0",
     "bleach>=3.2.1",
     "markdown>=3.1.1",
-    "pyyaml<6.0,>=5.1",
     "toolz",
     "feedparser>5.3",
     "python-dateutil>=2.6.0",
@@ -24,6 +24,7 @@ dependencies = [
     "pelican-sitemap<2.0.0,>=1.0.2",
     "pelican-redirect<2.0.0,>=1.0.2",
     "pelican-aio-planet",
+    "m-css @ file:///${PROJECT_ROOT}/m.css",
 ]
 
 [project.urls]
@@ -33,17 +34,21 @@ Homepage = "https://fluid.quest"
 requires = ["pdm-backend"]
 build-backend = "pdm.backend"
 
-[tool.pdm]
+[tool.pdm.build]
 package-dir = "src"
 
 [tool.pdm.dev-dependencies]
 dev = [
-    "-e file:///${PROJECT_ROOT}/m.css#egg=m-css",
     "livereload",
     "cookiecutter<2.0.0",
     "cssutils",
     "ghp-import",
 ]
+
+[tool.pdm.version]
+source = "scm"
+write_to = "pelican_ashwinvis/_version.py"
+write_template = "__version__ = '{}'"
 
 [tool.ruff]
 # Enable the pycodestyle (`E`) and Pyflakes (`F`) rules by default.
