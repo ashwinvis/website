@@ -161,7 +161,7 @@ M_LINKS_FOOTER2 = [
     ("Research", ""),
     ("Google-Scholar", "https://scholar.google.se/citations?user=zv4wwKoAAAAJ"),
     ("ORCID", "https://orcid.org/0000-0002-2979-6327"),
-    ("ResearchGate", "https://www.researchgate.net/profile/Ashwin_Vishnu_Mohanan"),
+    ("ResearchGate", "https://www.researchgate.net/profile/Ashwin-Vishnu-Mohanan-2"),
     ("Zenodo", "https://zenodo.org/search?page=1&size=20&q=Mohanan,%20Ashwin%20Vishnu"),
     ("Zotero", "https://zotero.org/ashwinvis"),
 ]
