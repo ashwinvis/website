@@ -111,3 +111,4 @@ node_modules
 
 # Code
 .vscode
+.pdm-python
