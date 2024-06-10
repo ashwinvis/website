@@ -13,8 +13,8 @@ SSH_PORT=22
 SSH_USER=www
 SSH_TARGET_DIR=/var/www
 
-GITHUB_PAGES_REMOTE=deploy
-GITHUB_PAGES_BRANCH=pages
+GHP_REMOTE=deploy
+GHP_BRANCH=main
 
 
 DEBUG ?= 0
@@ -93,10 +93,10 @@ cname:
 ssh_upload: publish
 	scp -P $(SSH_PORT) -r "$(OUTPUTDIR)"/* "$(SSH_USER)@$(SSH_HOST):$(SSH_TARGET_DIR)"
 
-github: publish
-	git fetch $(GITHUB_PAGES_REMOTE) $(GITHUB_PAGES_BRANCH)
-	ghp-import -m "Generate Pelican site: ashwinvis/website@$$(git id)" -r $(GITHUB_PAGES_REMOTE) -b $(GITHUB_PAGES_BRANCH) $(OUTPUTDIR)
-	git push -u $(GITHUB_PAGES_REMOTE) $(GITHUB_PAGES_BRANCH)
+deploy: publish
+	git fetch $(GHP_REMOTE) $(GHP_BRANCH)
+	ghp-import --no-history -m "Generate Pelican site: ashwinvis/website@$$(git id)" -r $(GHP_REMOTE) -b $(GHP_BRANCH) $(OUTPUTDIR)
+	git push -u $(GHP_REMOTE) $(GHP_BRANCH)
 
 sftp_upload: publish
 	printf 'put -r $(OUTPUTDIR)/*' | sftp $(SSH_USER)@$(SSH_HOST):$(SSH_TARGET_DIR)
