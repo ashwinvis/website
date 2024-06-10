@@ -161,7 +161,7 @@ M_LINKS_FOOTER2 = [
     ("Research", ""),
     ("Google-Scholar", "https://scholar.google.se/citations?user=zv4wwKoAAAAJ"),
     ("ORCID", "https://orcid.org/0000-0002-2979-6327"),
-    ("ResearchGate", "https://www.researchgate.net/profile/Ashwin_Vishnu_Mohanan"),
+    ("ResearchGate", "https://www.researchgate.net/profile/Ashwin-Vishnu-Mohanan-2"),
     ("Zenodo", "https://zenodo.org/search?page=1&size=20&q=Mohanan,%20Ashwin%20Vishnu"),
     ("Zotero", "https://zotero.org/ashwinvis"),
 ]
@@ -244,7 +244,7 @@ WEBRING_FEED_URLS = list(PLANET_FEEDS.values())
 WEBRING_ARTICLES_PER_FEED = PLANET_MAX_ARTICLES_PER_FEED
 WEBRING_MAX_ARTICLES = max(42, WEBRING_ARTICLES_PER_FEED * len(WEBRING_FEED_URLS))
 WEBRING_SUMMARY_LENGTH = 140
-TEMPLATE_PAGES = {"planet.html": "planet.html"}
+# TEMPLATE_PAGES = {"planet.html": "planet.html"}
 
 # Sitemap
 SITEMAP = {

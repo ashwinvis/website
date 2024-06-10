@@ -1,10 +1,54 @@
+[project]
+name = "pelican-ashwinvis"
+description = "A collection of plugins used for Ashwin's website"
+readme = "README.md"
+dynamic = ["version"]
+authors = [
+    {name = "Ashwin Vishnu Mohanan"},
+]
+requires-python = ">= 3.8.1"
+license = {text = "AGPL-3.0-or-later"}
+dependencies = [
+    "pelican<5.0,>=4.5",
+    "beautifulsoup4>=4.7.1",
+    "restructuredtext-lint>=1.3.0",
+    "invoke>=1.6.0",
+    "bleach>=3.2.1",
+    "markdown>=3.1.1",
+    "toolz",
+    "feedparser>5.3",
+    "python-dateutil>=2.6.0",
+    "aiohttp<4.0.0,>=3.7.4",
+    "async-timeout>=3.0.1",
+    "defusedxml",
+    "pelican-sitemap<2.0.0,>=1.0.2",
+    "pelican-redirect<2.0.0,>=1.0.2",
+    "pelican-aio-planet",
+    "m-css @ file:///${PROJECT_ROOT}/m.css",
+]
+
+[project.urls]
+Homepage = "https://fluid.quest"
+
 [build-system]
-requires = [
-    "setuptools>=49.5.0",
-    "wheel",
-    "setuptools_scm[toml]>=7.0.0",
-    ]
-build-backend = "setuptools.build_meta"
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
+
+[tool.pdm.build]
+package-dir = "src"
+
+[tool.pdm.dev-dependencies]
+dev = [
+    "livereload",
+    "cookiecutter<2.0.0",
+    "cssutils",
+    "ghp-import",
+]
+
+[tool.pdm.version]
+source = "scm"
+write_to = "pelican_ashwinvis/_version.py"
+write_template = "__version__ = '{}'"
 
 [tool.ruff]
 # Enable the pycodestyle (`E`) and Pyflakes (`F`) rules by default.
