@@ -41,10 +41,9 @@ git config submodule.recurse true
 **Optional**: Set up remote repositories for manual deployment
 
 ```
-git remote add downstream git@github.com:ashwinvis/website.git
-git remote add deploy git@github.com:ashwinvis/ashwinvis.github.io
+git remote add deploy git@codeberg.org:ashwinvis/pages.git
 
-make github
+make deploy
 
 ```
 
