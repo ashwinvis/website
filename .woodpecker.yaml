@@ -11,6 +11,6 @@ steps:
     commands:
       - apk add curl
       - curl -sSL https://pdm-project.org/install-pdm.py | python3 -
-      - pdm install
       - export PATH="/root/.local/bin:$PATH"
+      - pdm install
       - make publish
