@@ -1,9 +1,14 @@
+when:
+  # - event: [pull_request, tag, cron]
+  - event: push
+    branch:
+      - ${CI_REPO_DEFAULT_BRANCH}
+      - 'draft/*'
+
 steps:
   - name: publish
-    image: 3.11-alpine
+    image: python:3.11-alpine
     commands:
       - curl -sSL https://pdm-project.org/install-pdm.py | python3 -
       - pdm install
       - make publish
-    when:
-      - branch: main
