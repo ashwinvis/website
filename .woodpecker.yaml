@@ -1,9 +1,9 @@
-when:
-  # - event: [pull_request, tag, cron]
-  - event: push
-    branch:
-      - ${CI_REPO_DEFAULT_BRANCH}
-      - 'draft/*'
+# when:
+#   # - event: [pull_request, tag, cron]
+#   - event: push
+#     branch:
+#       - ${CI_REPO_DEFAULT_BRANCH}
+#       - 'draft/*'
 
 steps:
   - name: publish
