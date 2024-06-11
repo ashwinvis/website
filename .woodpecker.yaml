@@ -1,6 +1,6 @@
 steps:
   - name: publish
-    image:
+    image: 3.11-alpine
     commands:
       - curl -sSL https://pdm-project.org/install-pdm.py | python3 -
       - pdm install
