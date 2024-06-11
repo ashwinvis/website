@@ -49,6 +49,7 @@ dev = [
 source = "scm"
 write_to = "pelican_ashwinvis/_version.py"
 write_template = "__version__ = '{}'"
+fallback_version = "0.0.0"
 
 [tool.ruff]
 # Enable the pycodestyle (`E`) and Pyflakes (`F`) rules by default.
