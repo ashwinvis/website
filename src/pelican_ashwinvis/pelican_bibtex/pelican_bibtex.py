@@ -8,6 +8,7 @@ citations, loaded from a BibTeX file at a configurable path.
 The use case for now is to generate a ``Publications'' page for academic
 websites.
 """
+
 # Author: Vlad Niculae <vlad@vene.ro>
 # Unlicense (see UNLICENSE for details)
 
